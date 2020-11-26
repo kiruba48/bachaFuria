@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gallery</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+  
+    </header>
+    <main data-scroll-container>
+      <div class="row">
+        <div>
+          <h2><a href="./index.html" class="logo">furia.</a></h2>
+        </div>
+        <nav id="main-menu" class="main-menu">
+          <a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
+            <span class="fa fa-close fa-1g" aria-hidden="true"></span>
+        </a>
+          <ul>
+            <li><a class="nav" href="index.html">Home</a></li>
+            <li><a class="nav" href="about.html">About</a></li>
+            <li><a class="nav" href="gallery.html">Gallery</a></li>
+            <li><a class="nav" href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="#main-menu-toggle" class="backdrop" hidden></a>
+
+        <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
+          <span class="fa fa-bars fa-3x" aria-hidden="true"></span>
+      </a>
+      </div>
+      <section class="tiles tiles--columns-rotated tiles--darker" id="grid">
+				<div class="tiles__wrap">
+					<div class="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid">
+						<div class="tiles__line-img" style="background-image:url(img/demo2/1.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/2.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/3.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/4.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/5.jpg)"></div>
+					</div>
+					<div class="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid">
+						<div class="tiles__line-img" style="background-image:url(img/demo2/5.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/6.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/7.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/8.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/9.jpg)"></div>
+					</div>
+					<div class="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid">
+						<div class="tiles__line-img" style="background-image:url(img/demo2/9.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/10.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/11.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/12.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/13.jpg)"></div>
+					</div>
+					<div class="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid">
+						<div class="tiles__line-img" style="background-image:url(img/demo2/13.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/14.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/15.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/16.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/17.jpg)"></div>
+					</div>
+					<div class="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid">
+						<div class="tiles__line-img" style="background-image:url(img/demo2/17.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/18.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/19.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/20.jpg)"></div>
+						<div class="tiles__line-img" style="background-image:url(img/demo2/1.jpg)"></div>
+					</div>
+				</div>
+				<h2 class="tiles__title">Gallery</h2>
+			</section>
+    </main>
+    <div class="cursor">
+      <span class="cursor--text"></span>
+    </div>
+    <script src="index.js"></script>
+  </body>
+
+</html>

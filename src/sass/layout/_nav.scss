@@ -1,0 +1,288 @@
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  // min-height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    color: $color-dark-white;
+    letter-spacing: 0.5rem;
+    font-size: 5rem;
+    font-family: "Abril Fatface", sans-serif;
+    text-decoration: none;
+    margin-left: 10rem;
+  }
+
+  .menu-toggle {
+    color: $color-dark-white;
+    margin-right: 5rem;
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+    color: rgba(266, 266, 266, 0.5);
+  }
+
+  .main-menu {
+    position: fixed;
+    display: none;
+    right: 35rem;
+    top: 0;
+    height: 100%;
+    overflow-x: visible;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 999;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding-top: 2.5rem;
+      min-height: 100%;
+      width: 35rem;
+      background-color: rgba(266, 266, 266, 0.85);
+    }
+
+    a {
+      display: block;
+      padding: 0.75rem 15rem;
+      color: $color-background;
+      text-decoration: none;
+      border-bottom: 1px solid #383838;
+      color: $color-background;
+      letter-spacing: 0.2rem;
+      font-weight: bold;
+      font-size: 3rem;
+
+      &:hover,
+      &:focus {
+        background: #333;
+        text-decoration: underline;
+        color: $color-dark-white;
+      }
+    }
+
+    .menu-close {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      border-bottom: none;
+      padding: 0.75rem;
+    }
+
+    &:target {
+      display: block;
+      right: 0;
+      outline: none;
+
+      .menu-close {
+        z-index: 1001;
+      }
+
+      ul {
+        position: relative;
+        z-index: 1000;
+      }
+    }
+  }
+
+  .main-menu:target + .backdrop {
+    position: fixed;
+    display: block;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background-color: rgba(0, 0, 0, 0.85);
+    cursor: default;
+  }
+
+  @include respond(tab-port) {
+    .main-menu {
+      right: 50rem;
+
+      ul {
+        width: 50rem;
+      }
+    }
+  }
+  @include respond(tab-land) {
+    justify-content: space-around;
+
+    .logo {
+      margin-left: 0;
+    }
+
+    .menu-toggle,
+    .main-menu .menu-close {
+      display: none;
+    }
+
+    .main-menu {
+      position: static;
+      display: block;
+
+      ul {
+        padding: 0;
+        background-color: rgba(23, 24, 26, 0);
+        height: 10vh;
+        width: auto;
+        overflow: hidden;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+
+        a {
+          color: $color-dark-white;
+          padding: 0.75rem;
+          text-decoration: none;
+          border-bottom: none;
+          letter-spacing: 0.2rem;
+          font-weight: bold;
+          font-size: 1.5rem;
+          margin-left: 5rem;
+
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            background: none;
+          }
+        }
+      }
+    }
+  }
+  @include respond(desktop) {
+  }
+  @include respond(big-desktop) {
+  }
+}
+
+// header {
+
+//   .row {}
+//   display: flex;
+//   flex-flow: row nowrap;
+//   min-height: 10vh;
+//   justify-content: space-around;
+//   align-items: center;
+
+//   .main-menu {
+//     position: fixed;
+//     display: none;
+//     left: 200px;
+//     top: 0;
+//     height: 100%;
+//     overflow-x: visible;
+//     overflow-y: auto;
+//     transition: right 0.3s ease;
+//     z-index: 999;
+
+//     .nav__link {
+//       list-style: none;
+//       margin: 0;
+//       padding-top: 2.5em;
+//       min-height: 100%;
+//       width: 200px;
+//       background-color: $color-dark-white;
+
+//       a {
+//         display: block;
+//         padding: 0.75em;
+//         color: $color-background;
+//         text-decoration: none;
+//         border-bottom: 1px solid #383838;
+
+//         &:hover,
+//         &:focus {
+//           text-decoration: underline;
+//           background: #333;
+//         }
+//       }
+//     }
+//   }
+
+//   .logo {
+//     color: $color-dark-white;
+//     letter-spacing: 0.5rem;
+//     font-size: 5rem;
+//     font-family: "Abril Fatface", sans-serif;
+//     text-decoration: none;
+//   }
+
+//   // .nav__link {
+//   //   position: absolute;
+//   //   right: 0px;
+//   //   height: 90vh;
+//   //   top: 10vh;
+//   //   background-color: $color-dark-white;
+//   //   display: flex;
+//   //   flex-direction: column;
+//   //   justify-content: space-around;
+//   //   align-items: center;
+//   //   width: 50%;
+//   //   // transform: translate(100%);
+//   //   z-index: 10;
+
+//   //   li {
+//   //     list-style: none;
+//   //   }
+
+//   //   a {
+//   //     color: $color-background;
+//   //     text-decoration: none;
+//   //     letter-spacing: 0.2rem;
+//   //     font-weight: bold;
+//   //     font-size: 1.5rem;
+//   //   }
+//   // }
+
+//   // .burger {
+//   //   div {
+//   //     width: 2rem;
+//   //     height: 0.2rem;
+//   //     background-color: $color-dark-white;
+//   //     margin: 0.5rem;
+//   //   }
+//   // }
+
+//   @include respond(tab-port) {
+//   }
+//   @include respond(tab-land) {
+//   }
+//   @include respond(desktop) {
+//     justify-content: space-around;
+//     align-items: center;
+//     width: 100%;
+//     margin: auto;
+
+//     .nav__link {
+//       position: fixed;
+//       display: flex;
+//       justify-content: space-between;
+//       width: 30%;
+
+//       li {
+//         list-style: none;
+//       }
+
+//       a {
+//         color: $color-dark-white;
+//         text-decoration: none;
+//         letter-spacing: 0.2rem;
+//         font-weight: bold;
+//         font-size: 1.5rem;
+//       }
+//     }
+//     .burger {
+//       display: none;
+//     }
+//   }
+//   @include respond(big-desktop) {
+//   }
+// }

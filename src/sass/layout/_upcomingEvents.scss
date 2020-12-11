@@ -1,0 +1,25 @@
+.events {
+  height: 100vh;
+  h1 {
+    height: 5rem;
+    font-size: 5vh;
+    color: $color-dark-white;
+    margin-left: 7rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 8px , 8/16 = 50%
+  }
+  @include respond(tab-land) {
+    h1 {
+      height: 10rem;
+      font-size: 7rem;
+      color: $color-dark-white;
+      margin-left: 7rem;
+    }
+  }
+  @include respond(desktop) {
+  }
+  @include respond(big-desktop) {
+  }
+}

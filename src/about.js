@@ -1,9 +1,28 @@
-import { cursor, cursorHover } from './utils';
+import { cursor, cursorHover, footerDate, navToggleBar, fixedNavBar, navAnim } from './utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+const app = () => {
+  footerDate();
+  // Animating nav slide
+  navAnim(); //Links slide animation
+}
+app();
+
+// Navigation bar
+const navToggle = document.querySelector('.nav-toggle');
+navToggle.addEventListener('click', navToggleBar)
+
+// Fixed navBar 
+window.addEventListener("scroll",fixedNavBar)
+
+
+
 const sliders = document.querySelectorAll('.slide');
 
+let slideT1;
+let pageTl;
 
 function animateScroll() {
 
@@ -12,7 +31,7 @@ function animateScroll() {
     const img = slide.querySelector('img');
     const revealText = slide.querySelector('.reveal-text');
 
-    const slideT1 = gsap.timeline({
+    slideT1 = gsap.timeline({
       defaults: {duration: 1, ease: "power2.inOut"},
       scrollTrigger: {
         trigger: slide,
@@ -24,7 +43,7 @@ function animateScroll() {
     slideT1.fromTo(img, {scale: 2}, {scale: 1}, '-=1');
     slideT1.fromTo(revealText, {x: "0%"}, {x: "100%"}, '-=0.75');
 
-    const pageTl = gsap.timeline({
+    pageTl = gsap.timeline({
       scrollTrigger: {
         trigger: slide,
         duration: "100%",
@@ -42,19 +61,25 @@ function animateScroll() {
 
 }
 
-animateScroll();
+
+
+
+
+
+
 
 window.addEventListener("mousemove", cursor);
 window.addEventListener("mouseover", cursorHover);
-
-
 // Swipe hover animation
-window.addEventListener("mouseover", (e) => {
-  const item = e.target;
-  if(item.classList.contains('explore')) {
-    gsap.to('.about__swipe', {y: "0%", duration: 1});
-  } else {
-    gsap.to('.about__swipe', {y: "100%", duration: 1});
-  }
-})
+// window.addEventListener("mouseover", (e) => {
+//   const item = e.target;
+//   if(item.classList.contains('explore')) {
+//     gsap.to('.about__swipe', {y: "0%", duration: 1});
+//   } else {
+//     gsap.to('.about__swipe', {y: "100%", duration: 1});
+//   }
+// })
+
+
+
 

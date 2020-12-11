@@ -12,6 +12,73 @@
   </head>
 
 
+  // Testimonial section
+const mouse = document.querySelector(".cursor");
+const mouseText = mouse.querySelector('.cursor--text');
+const slider = document.querySelector('.testimonials__slider');
+const innerSlider = document.querySelector('.testimonials__slider-inner');
+let pressed = false;
+let startX;
+let x;
+/****************** *******************/
+
+
+
+// mouseenter
+// window.addEventListener("mouseover", (e) => {
+//   const item = e.target;
+//   if(item.classList.contains('testimonials__slider')) {
+//     mouse.classList.add('drag');
+//     mouseText.innerText = 'Drag';
+//   } else {
+//     mouse.classList.remove('drag');
+//     mouseText.innerText = '';
+//   }
+// });
+
+/****************** *******************/
+
+// horizontal drag
+slider.addEventListener('mousedown', e => {
+  pressed = true;
+  startX = e.offsetX - innerSlider.offsetLeft;
+  slider.style.cursor = 'grabbing';
+})
+
+
+// changing grab hand to open
+slider.addEventListener('mouseup', () => {
+  slider.style.cursor = 'grab';
+})
+// toggling pressed state
+window.addEventListener('mouseup', () => {
+  pressed = false;
+})
+// drag
+slider.addEventListener('mousemove', e => {
+  if(!pressed) return;
+  e.preventDefault();
+
+  x = e.offsetX;
+  innerSlider.style.left = `${x - startX}px`;
+
+  checkBoundary()
+})
+
+// To control the boundary 
+function checkBoundary() {
+  let outer = slider.getBoundingClientRect();
+  let inner = innerSlider.getBoundingClientRect();
+
+  if(parseInt(innerSlider.style.left) > 0) {
+    innerSlider.style.left = '0px';
+  } else if(inner.right < outer.right) {
+    innerSlider.style.left = `-${inner.width - outer.width}px`;
+  }
+}
+
+
+
 
 
 // // import ScrollMagic from 'scrollmagic';
@@ -73,11 +140,76 @@ function render() {
 }
 
 
+/****************** *******************/
+
+// // classes animation
+// const containers = document.querySelectorAll('.styling__container');
+// const cards = document.querySelectorAll('.styling__card');
+// // Animate items
+// const titles = document.querySelectorAll('.styling__title');
+// const images = document.querySelectorAll('.styling--header img');
+// const actions = document.querySelectorAll('.styling__action button');
+// const descriptions = document.querySelectorAll('.styling__info h3');
 
 
+// containers.forEach((container, index) => {
+//   container.addEventListener('mousemove', (e) => {
+//     let xAxis = ( (window.innerWidth / 2) - e.pageX ) / 20;
+//     let yAxis = ( (window.innerHeight / 2)  - e.pageY ) / 20;
+  
+//     cards[index].style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+//   })
+// })
+/****************** *******************/
+
+/****************** *******************/
+
+// Animate cursor in
+// containers.forEach((container, index) => {
+//   container.addEventListener('mouseenter', (e) => {
+//     cards[index].style.transition = 'none';
+//     titles[index].style.transform = 'translateZ(100px)';
+//     images[index].style.transform = 'translateZ(150px) rotateZ(-45deg)';
+//     actions[index].style.transform = 'translateZ(100px)';
+//     descriptions[index].style.transform = 'translateZ(80px)';
+//   })
+// })
+
+// // Animate cursor out
+// containers.forEach((container, index) => {
+//   container.addEventListener('mouseleave', (e) => {
+//     cards[index].style.transition = 'all 0.5s ease';
+//     cards[index].style.transform = `rotateY(0deg) rotateX(0deg)`;
+//     titles[index].style.transform = 'translateZ(0)';
+//     images[index].style.transform = 'translateZ(0) rotateZ(0)';
+//     actions[index].style.transform = 'translateZ(0)';
+//     descriptions[index].style.transform = 'translateZ(0)';
+//   })
+// })
+/****************** *******************/
 
 
-
+// let tilesAnim;
+// function showTiles(container) {
+//   document.body.style.overflow = 'auto';
+//   document.scrollingElement.scrollTo(0, 0);
+//   // gsap.utils.toArray('.tiles').forEach((section, index) => {
+//   const tiles = gsap.utils.toArray('.tiles');
+//   console.log(tiles)
+//   tiles.forEach((tile, index) => {
+//     const tilesSection = tile.querySelector('.tiles__line');
+//     const [x, xEnd] = (index % 2) ? ['100%', (tilesSection.scrollWidth - tile.offsetWidth) * -1] : [tilesSection.scrollWidth * -1, 0];
+//     tilesAnim = gsap.fromTo(tilesSection, {  x  }, {
+//       x: xEnd,
+//       scrollTrigger: { 
+//         trigger: tile, 
+//         scrub: 1,
+//         markers: true,
+//         id: "tiles",
+//       }
+//     });
+//   });
+// }
 
 
 

@@ -1,16 +1,36 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
-@import "base/typography";
 @import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
 
-@import "layout/nav";
+@import "components/button";
+@import "components/card";
+@import "components/tiles";
+@import "components/content";
+@import "components/cursor";
+@import "components/classes";
+@import "components/composition";
+@import "components/benefit-box";
+@import "components/toTop";
+@import "components/story";
+@import "components/bg-video";
+@import "components/form";
+@import "components/transitionSwipe";
+@import "components/slider";
+@import "components/testimonials";
+@import "components/model";
 
+// @import "layout/nav";
+@import "layout/stickyNav";
+@import "layout/upcomingEvents";
+@import "layout/testimonials";
+@import "layout/footer";
+
+@import "pages/home";
 @import "pages/about";
 @import "pages/gallery";
 
 @import "vendor/locomotive";
-
-@import "components/tiles";
-@import "components/content";
-@import "components/cursor";

@@ -1,0 +1,68 @@
+.testimonials {
+  position: relative;
+  height: 100vh;
+
+  .testimonials__slider {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    width: 80%;
+    height: 35rem;
+    overflow: hidden;
+
+    .testimonials__slider-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200%;
+
+      .testimonial__slides {
+        img {
+          width: 15rem;
+          height: 15rem;
+          border-radius: 50%;
+        }
+        h4 {
+          color: $color-background;
+          font-size: 1.5rem;
+          padding: 1rem 0;
+        }
+        p {
+          color: $color-background;
+          font-size: 1.3rem;
+          padding: 1rem 0;
+        }
+        span {
+          color: $color-background;
+        }
+      }
+    }
+  }
+
+  @include respond(tab-port) {
+  }
+  @include respond(tab-land) {
+    .testimonials__slider {
+      .testimonials__slider-inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.5rem;
+        pointer-events: none;
+
+        .testimonial__slides {
+          height: 100%;
+          background-color: $color-dark-white;
+          text-align: center;
+          padding: 3rem;
+          img {
+          }
+        }
+      }
+    }
+  }
+  @include respond(desktop) {
+  }
+  @include respond(big-desktop) {
+  }
+}

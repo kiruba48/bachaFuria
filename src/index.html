@@ -1,98 +1,499 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>BachaFuria</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="./icon-font.css">
     <link rel="stylesheet" href="./style.css" />
+    <script defer src="index.js"></script>
+
   </head>
 
-  <body>
-    <header>
-      <div class="row">
-        <div>
-          <h2><a href="./index.html" class="logo">furia.</a></h2>
+  <body data-barba="wrapper">
+    <header id="home">
+      <nav id="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <button class="nav-toggle" href="#main-menu-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <img src="./white.png" class="logo" alt="logo" />
+            
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="index.html" class="nav__link">home</a>
+              </li>
+              <li>
+                <a href="about.html" class="nav__link">About us</a>
+              </li>
+              <li>
+                <a href="#events" class="nav__link">Events</a>
+              </li>
+              <li>
+                <a href="#classes" class="nav__link">classes</a>
+              </li>
+              <li>
+                <a href="#tickets" class="nav__link">Tickets</a>
+              </li>
+              <li>
+                <a href="gallery.html" class="nav__link">Gallery</a>
+              </li>
+              <li>
+                <a href=""  class="nav__link btn--show-modal">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <nav id="main-menu" class="main-menu">
-          <a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
-            <span class="fa fa-close fa-1g" aria-hidden="true"></span>
-        </a>
-          <ul>
-            <li><a class="nav" href="index.html">Home</a></li>
-            <li><a class="nav" href="about.html">About</a></li>
-            <li><a class="nav" href="gallery.html">Gallery</a></li>
-            <li><a class="nav" href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <a href="#main-menu-toggle" class="backdrop" hidden></a>
+      </nav>
+     
 
-        <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
-          <span class="fa fa-bars fa-3x" aria-hidden="true"></span>
-      </a>
-      </div>
     </header>
-    
-    <main id="main" data-scroll-container>
-      <section class="tiles tiles--perspective tiles--darker">
-				<div class="tiles__wrap">
-					<div class="tiles__line" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
-						<div class="tiles__line-img" style="background-image:url(img/demo1/1.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/2.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/3.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/4.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/5.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/6.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/7.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/8.jpg)"></div>
-					</div>
-					<div class="tiles__line" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
-						<div class="tiles__line-img" style="background-image:url(img/demo1/7.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/8.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/9.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/10.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/11.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/12.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/13.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/14.jpg)"></div>
-					</div>
-					<div class="tiles__line" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
-						<div class="tiles__line-img" style="background-image:url(img/demo1/13.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/14.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/15.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/16.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/17.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/18.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/19.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/20.jpg)"></div>
-					</div>
-					<div class="tiles__line" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
-						<div class="tiles__line-img" style="background-image:url(img/demo1/19.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/20.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/21.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/22.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/23.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/24.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/25.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo1/26.jpg)"></div>
-					</div>
-				</div>
-				<h2 class="tiles__title tiles__title--intro" data-scroll data-scroll-speed="4">North East's Favourite<br/>Bachata<br/> community</h2>
-			</section>
-			<section class="content">
-				<p class="content__text" data-scroll data-scroll-speed="2">We have the money, the power, the medical understanding, the scientific know-how, the love and the community to produce a kind of human paradise. But we are led by the least among us – the least intelligent, the least noble, the least visionary. We are led by the least among us and we do not fight back against the dehumanizing values that are handed down as control icons.</p>
-			</section>
-    </main>
-    <div class="cursor">
-      <span class="cursor--text"></span>
-    </div>
+    <main data-barba="container" data-barba-namespace="home">
+        <section class="tiles tiles--oneline">
+          <div class="tiles__wrap">
+            <div class="tiles__line">
+              <div class="tiles__line-img" style="background-image:url(img/bachaFuriaImage/FB_IMG_1606847610866.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/bachaFuriaImage/FB_IMG_1606910319277.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/bachaFuriaImage/FB_IMG_1606847607261.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/bachaFuriaImage/FB_IMG_1579866014213.jpg)"></div>
+            </div>
+          </div>
+          <h2 class="tiles__title tiles__title--left tiles__title--full tiles__title--alt" >BACHAFURIA</h2>
+        </section>
+        <section class="tiles tiles--oneline">
+          <div class="tiles__wrap">
+            <div class="tiles__line">
+              <div class="tiles__line-img" style="background-image:url(img/bachaFuriaImage/FB_IMG_1579866014213.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/bachaFuriaImage/FB_IMG_1606910319277.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/bachaFuriaImage/FB_IMG_1606847607261.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/bachaFuriaImage/FB_IMG_1606847610866.jpg)"></div>
+            </div>
+          </div>
+          <h2 class="tiles__title tiles__title--right tiles__title--full tiles__title--alt" >To Dance</h2>
+        </section>
+        <section class="tiles tiles--oneline">
+          <div class="tiles__wrap">
+            <div class="tiles__line">
+              <div class="tiles__line-img" style="background-image:url(img/demo3/9.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo3/10.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo3/11.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo3/12.jpg)"></div>
+            </div>
+          </div>
+          <h2 class="tiles__title tiles__title--left tiles__title--full tiles__title--alt">To Express</h2>
+        </section>
 
-    <script src="index.js"></script>
+
+      <section class="section home__cta">
+        <div class="home__cta__text-container">
+          <h1 class="home-primary-heading">
+            <span class="home-primary-heading--main">North East's Favourite</span>
+            <span class="home-primary-heading--sub">Dance Community</span>
+          </h1>
+  
+          <a href="#" class="btn btn--white btn--animated">Join Us</a>
+        </div>
+      </section>
+
+      <section class="section section-benefits">
+        <div class="benefits-grid">
+          <div class="benefit-1">
+            <div class="benefit-box">
+              <i class="benefit-box__icon icon-basic-compass"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">Discover your Passion</h3>
+              <p class="paragraph benifit-box__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, temporibus.
+              </p>
+            </div>
+          </div>
+          <div class="benefit-2">
+            <div class="benefit-box">
+              <i class="benefit-box__icon icon-basic-heart"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">Get Fit</h3>
+              <p class="paragraph benifit-box__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, temporibus.
+              </p>
+            </div>
+          </div>
+          <div class="benefit-3">
+            <div class="benefit-box">
+              <i class="benefit-box__icon icon-basic-globe"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">Travel & Dance</h3>
+              <p class="paragraph benifit-box__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, temporibus.
+              </p>
+            </div>
+          </div>
+          <div class="benefit-4">
+            <div class="benefit-box">
+              <i class="benefit-box__icon icon-basic-star"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">Meet Awesome people</h3>
+              <p class="paragraph benifit-box__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, temporibus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section classes-bachafuria">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary u-heading-bg-image-light">
+            What will you learn
+          </h2> 
+        </div>
+        <div class="card-classes">
+          <div class="lead-bachafuria">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--1">&nbsp;</div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--1">partner work</span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>sensual</li>
+                    <li>passionate</li>
+                    <li>such</li>
+                    <li>a</li>
+                    <li>bitch</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back-1">
+                <div class="card__side card__side--back card__side--back-1">
+                  <div class="card__cta">
+                    <div class="card__price-box">
+                      <p class="card__price-only">Only</p>
+                      <p class="card__price-value">£5</p>
+                    </div>
+                    <a href="#" class="btn btn--white btn--animated">Book now</a>
+                  </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-members-bachafuria-2">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--2">&nbsp;</div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--1">Team</span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>sensual</li>
+                    <li>passionate</li>
+                    <li>such</li>
+                    <li>a</li>
+                    <li>bitch</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back-1">
+                <div class="card__side card__side--back card__side--back-1">
+                  <div class="card__cta">
+                    <div class="card__price-box">
+                      <p class="card__price-only">Only</p>
+                      <p class="card__price-value">£5</p>
+                    </div>
+                    <a href="#" class="btn btn--white btn--animated">Book now</a>
+                  </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-members-bachafuria-3">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--3">&nbsp;</div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--1">styling</span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>sensual</li>
+                    <li>passionate</li>
+                    <li>such</li>
+                    <li>a</li>
+                    <li>bitch</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back-1">
+                <div class="card__side card__side--back card__side--back-1">
+                  <div class="card__cta">
+                    <div class="card__price-box">
+                      <p class="card__price-only">Only</p>
+                      <p class="card__price-value">£5</p>
+                    </div>
+                    <a href="#" class="btn btn--white btn--animated">Book now</a>
+                  </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="classes-bachafuria__btn u-center-text u-margin-top-big">
+            <a href="#" class="btn btn--white btn--animated">All Classes</a>
+          </div>
+      </section>
+      <section class="section section-stories">
+        <div class="bg-video">
+          <video class="bg-video__content" autoplay muted loop>
+            <source src="img/story-1.mp4" type="video/mp4">
+            <source src="img/story-1.webm" type="video.webm">
+              Your Browser is not supported
+          </video>
+        </div>
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary u-heading-bg-image-light">
+            Life is better when you dance
+          </h2> 
+        </div>
+        <div class="slider">
+          <div class="slide slide--1">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Best financial decision ever!</h5>
+              <blockquote class="testimonial__text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Accusantium quas quisquam non? Quas voluptate nulla minima
+                deleniti optio ullam nesciunt, numquam corporis et asperiores
+                laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
+                id alias reiciendis, perferendis facere pariatur dolore veniam
+                autem esse non voluptatem saepe provident nihil molestiae.
+              </blockquote>
+              <address class="testimonial__author">
+                <img src="img/demo2/15.jpg" alt="" class="testimonial__photo" />
+                <h6 class="testimonial__name">Aarav Lynn</h6>
+                <p class="testimonial__location">San Francisco, USA</p>
+              </address>
+            </div>
+          </div>
+  
+          <div class="slide slide--2">
+            <div class="testimonial">
+              <h5 class="testimonial__header">
+                The last step to becoming a complete minimalist
+              </h5>
+              <blockquote class="testimonial__text">
+                Quisquam itaque deserunt ullam, quia ea repellendus provident,
+                ducimus neque ipsam modi voluptatibus doloremque, corrupti
+                laborum. Incidunt numquam perferendis veritatis neque repellendus.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
+                deserunt exercitationem deleniti.
+              </blockquote>
+              <address class="testimonial__author">
+                <img src="img/demo2/15.jpg" alt="" class="testimonial__photo" />
+                <h6 class="testimonial__name">Miyah Miles</h6>
+                <p class="testimonial__location">London, UK</p>
+              </address>
+            </div>
+          </div>
+  
+          <div class="slide slide--3">
+            <div class="testimonial">
+              <h5 class="testimonial__header">
+                Finally free from old-school banks
+              </h5>
+              <blockquote class="testimonial__text">
+                Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+                incidunt commodi architecto numquam omnis nulla autem,
+                necessitatibus blanditiis modi similique quidem. Odio aliquam
+                culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
+                deleniti saepe aliquid quos inventore sequi. Necessitatibus id
+                alias reiciendis, perferendis facere.
+              </blockquote>
+              <address class="testimonial__author">
+                <img src="img/demo2/15.jpg" alt="" class="testimonial__photo" />
+                <h6 class="testimonial__name">Francisco Gomes</h6>
+                <p class="testimonial__location">Lisbon, Portugal</p>
+              </address>
+            </div>
+          </div>
+  
+          <!-- <div class="slide"><img src="img/img-1.jpg" alt="Photo 1" /></div>
+          <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
+          <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
+          <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div> -->
+          <button class="slider__btn slider__btn--left">&larr;</button>
+          <button class="slider__btn slider__btn--right">&rarr;</button>
+          <div class="dots"></div>
+        </div>
+        <!-- <div class="stories-container">
+          <div class="story">
+            <figure class="story__shape">
+              <img src="img/demo2/15.jpg" alt="dancer" class="story__img">
+              <figcaption class="story__caption">Sam Sammy</figcaption>
+            </figure>
+            <div class="story__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">Love the energy in their classes</h3>
+              <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, non. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, praesentium.</p>
+            </div>
+          </div>
+        </div>
+        <div class="stories-container">
+          <div class="story">
+            <figure class="story__shape">
+              <img src="img/demo2/15.jpg" alt="dancer" class="story__img">
+              <figcaption class="story__caption">Sam Sammy</figcaption>
+            </figure>
+            <div class="story__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">Love the energy in their classes</h3>
+              <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, non. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, praesentium.</p>
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="classes-bachafuria__btn u-center-text u-margin-top-big">
+          <a href="#" class="btn-text">see more &rarr;</a>
+        </div> -->
+      </section>
+
+      <section class="section section-book">
+        <div class="book-container">
+          <div class="book">
+            <div class="book__form">
+              <form action="#" class="form">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary u-heading-bg-image-dark">
+                    Register your interest
+                  </h2> 
+                </div>
+                <div class="form__group">
+                  <input type="text" class="form__input" placeholder="Full Name" id="name" required>
+                  <label for="name" class="form__label">Full Name</label>
+                </div>
+                <div class="form__group">
+                  <input type="email" class="form__input" placeholder="Email Address" id="email" required>
+                  <label for="email" class="form__label">Email Address</label>
+                </div>
+
+                <div class="form__group u-margin-bottom-medium">
+                  <div class="form__radio-group">
+                    <input type="radio" class="form__radio-input" id="styling">
+                    <label for="styling" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      styling
+                    </label>
+                  </div>
+                  <div class="form__radio-group">
+                    <input type="radio" class="form__radio-input" id="partnerwork">
+                    <label for="partnerwork" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Partner Work</label>
+                  </div>
+                  <div class="form__radio-group">
+                    <input type="radio" class="form__radio-input" id="performance">
+                    <label for="performance" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Performance</label>
+                  </div>
+                </div>
+                <div class="form__group">
+                  <button class="btn btn--dark">submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer footer__section">
+        <p>
+          copyright &copy; BachaFuria Dance Company
+          <span id="date"></span>. all rights reserved
+        </p>
+      </section>
+      <!-- <script src="index.js"></script> -->
+    </main>
+    <!-- <footer class="footer footer__section">
+      <p>
+        copyright &copy; BachaFuria Dance Company
+        <span id="date"></span>. all rights reserved
+      </p>
+    </footer> -->
+
+    <!-- model -->
+    <div class="modal hidden" id="modal">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Open your bank account <br />
+        in just <span class="highlight">5 minutes</span>
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" cols="33">
+        It was a dark and stormy night...
+        </textarea>
+        <button class="btn">Next step &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+     
+    <!-- </main> -->
+      <div class="cursor">
+        <span class="cursor--text"></span>
+      </div>
+      <!-- back to top button -->
+      <a href="#home" class="scoll-link top-link">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+      <!-- transition animation -->
+      <div class="swipe swipe--1"></div>
+      <div class="swipe swipe--2"></div>
+      <div class="swipe swipe--3"></div>
+
+      <ul class="transition">
+        <li>B</li>
+        <li>A</li>
+        <li>C</li>
+        <li>H</li>
+        <li>A</li>
+        <li>F</li>
+        <li>U</li>
+        <li>R</li>
+        <li>I</li>
+        <li>A</li>
+      </ul>
+
+
+      <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+      integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"
+      integrity="sha256-XBVALc3QsDSQiDtiaBwNZ2rxCJTHzlUhhlDQ84J8bw8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"
+      integrity="sha256-+9YNuItWuR4sbqeaNiJOxG0BvptYz4fbUXbIZoH5Jwo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    
+    <!-- <script src="index.js"></script> -->
   </body>
 </html>
 

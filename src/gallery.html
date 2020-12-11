@@ -4,7 +4,7 @@
     <title>Gallery</title>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
+    <scrip src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap"
       rel="stylesheet"
@@ -13,9 +13,6 @@
   </head>
   <body>
     <header>
-  
-    </header>
-    <main data-scroll-container>
       <div class="row">
         <div>
           <h2><a href="./index.html" class="logo">furia.</a></h2>
@@ -24,7 +21,7 @@
           <a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
             <span class="fa fa-close fa-1g" aria-hidden="true"></span>
         </a>
-          <ul>
+          <ul class="nav-links">
             <li><a class="nav" href="index.html">Home</a></li>
             <li><a class="nav" href="about.html">About</a></li>
             <li><a class="nav" href="gallery.html">Gallery</a></li>
@@ -35,8 +32,10 @@
 
         <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
           <span class="fa fa-bars fa-3x" aria-hidden="true"></span>
-      </a>
+        </a>
       </div>
+    </header>
+    <main data-scroll-container>
       <section class="tiles tiles--columns-rotated tiles--darker" id="grid">
 				<div class="tiles__wrap">
 					<div class="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid">
@@ -81,6 +80,11 @@
     <div class="cursor">
       <span class="cursor--text"></span>
     </div>
+
+    <scrip src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></scrip>
+    <scrip src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></scrip>
+    
+      
     <script src="index.js"></script>
   </body>
 

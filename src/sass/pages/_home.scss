@@ -1,0 +1,223 @@
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.home__cta {
+  position: relative;
+  height: 25vh;
+  text-align: center;
+  margin-top: -8vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(220, 88, 72),
+    rgb(226, 226, 226)
+  );
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
+
+  @include respond(tab-land) {
+    height: 20vh;
+  }
+  @include respond(desktop) {
+    height: 40vh;
+    text-align: unset;
+  }
+  @include respond(big-desktop) {
+    height: 55vh;
+  }
+
+  &__text-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+  }
+}
+
+.section-benefits {
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+  margin-top: -15vh;
+  height: auto;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(78, 78, 78, 0.801),
+      rgba(236, 236, 236, 0.493)
+    ),
+    url(img/IMG_6311.JPG);
+  background-size: cover;
+
+  @include respond(tab-port) {
+    // height: 85vh;
+    padding-top: 20rem;
+    padding-bottom: 2rem;
+  }
+
+  @include respond(tab-land) {
+    padding-top: 25rem;
+    padding-bottom: 0;
+  }
+
+  @include respond(desktop) {
+    height: 100vh;
+    padding: 20rem 0;
+  }
+  .benefits-grid {
+    display: grid;
+    margin: 5rem 5rem;
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    // column-gap: 5rem;
+    row-gap: 5rem;
+
+    @include respond(tab-port) {
+      display: grid;
+      margin: 0 10rem;
+      padding-bottom: 10rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 5rem;
+      row-gap: 5rem;
+    }
+
+    @include respond(tab-port) {
+      display: grid;
+      margin: 0 10rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 5rem;
+      row-gap: 5rem;
+    }
+
+    @include respond(desktop) {
+      display: grid;
+      margin: 8rem 10rem;
+      padding-bottom: 0;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 5rem;
+    }
+  }
+}
+
+.classes-bachafuria {
+  margin: 0 3rem;
+  padding: 15rem 0;
+  height: auto;
+  .card-classes {
+    display: grid;
+    margin: 0 2.5rem;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5rem;
+  }
+  @include respond(tab-port) {
+    .card-classes {
+      display: grid;
+      margin: 0 20rem;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 5rem;
+    }
+  }
+  @include respond(tab-land) {
+    .card-classes {
+      display: grid;
+      margin: 0 5rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 5rem;
+    }
+  }
+  @include respond(desktop) {
+    .card-classes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 10rem;
+    }
+  }
+}
+
+.section-stories {
+  position: relative;
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(78, 78, 78, 0.555),
+    rgba(236, 236, 236, 0.493)
+  );
+
+  .stories-container {
+    margin: 0 auto;
+    max-width: 114rem;
+  }
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(220, 87, 72, 0.589),
+    rgba(226, 226, 226, 0.555)
+  );
+  .book-container {
+    margin: 0 auto;
+    width: 80%;
+
+    @include respond(desktop) {
+      max-width: 114rem;
+    }
+
+    .book {
+      background-image: linear-gradient(
+          to right,
+          rgba(#fff, 0.9) 0%,
+          rgba(#fff, 0.9) 100%
+        ),
+        url(img/IMG_6311.JPG);
+      background-size: cover;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba(#111, 0.2);
+
+      @include respond(tab-land) {
+        background-image: linear-gradient(
+            105deg,
+            rgba(#fff, 0.9) 0%,
+            rgba(#fff, 0.9) 65%,
+            transparent 65%
+          ),
+          url(img/IMG_6311.JPG);
+        background-size: cover;
+      }
+
+      @include respond(desktop) {
+        background-image: linear-gradient(
+            105deg,
+            rgba(#fff, 0.9) 0%,
+            rgba(#fff, 0.9) 60%,
+            transparent 60%
+          ),
+          url(img/IMG_6311.JPG);
+        background-size: 100%;
+      }
+
+      &__form {
+        width: 100%;
+        padding: 6rem;
+
+        @include respond(tab-land) {
+          width: 65%;
+        }
+        @include respond(desktop) {
+          width: 60%;
+          padding: 6rem;
+        }
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@
 
 html {
   font-size: 50%; //1rem = 8px , 8/16 = 50%
+  scroll-behavior: smooth;
 
   @include respond(tab-port) {
     font-size: 50%; //1rem = 8px , 8/16 = 50%
@@ -26,9 +27,10 @@ html {
 body {
   box-sizing: border-box;
   overflow-x: hidden;
+  position: relative;
 }
 
 main {
   overflow: hidden;
-  // position: relative;
+  position: absolute;
 }

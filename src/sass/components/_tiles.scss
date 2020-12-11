@@ -293,8 +293,8 @@
 }
 
 .tiles__title--alt {
-  font-size: 9vw;
-  font-size: clamp(2rem, 9vw, 7.25rem);
+  font-size: 10vw;
+  font-size: clamp(2rem, 10vw, 9.25rem);
 }
 
 .tiles__title--intro {
@@ -305,10 +305,24 @@
 
 .tiles__title--right {
   justify-content: flex-end;
+  background-image: linear-gradient(
+    to right,
+    $color-dark-white,
+    rgb(220, 88, 72)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .tiles__title--left {
   justify-content: flex-start;
+  background-image: linear-gradient(
+    to right,
+    $color-dark-white,
+    rgb(220, 88, 72)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .tiles__title--full {

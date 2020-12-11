@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>BachaFuria</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
     <link
@@ -12,86 +14,225 @@
 
     <link rel="stylesheet" href="./style.css" />
   </head>
-</html>
-<body>
-  <header>
-    <div class="row">
-      <div>
-        <h2><a href="./index.html" class="logo">furia.</a></h2>
-      </div>
-      <nav id="main-menu" class="main-menu">
-        <a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
-          <span class="fa fa-close fa-1g" aria-hidden="true"></span>
-      </a>
-        <ul>
-          <li><a class="nav" href="index.html">Home</a></li>
-          <li><a class="nav" href="about.html">About</a></li>
-          <li><a class="nav" href="gallery.html">Gallery</a></li>
-          <li><a class="nav" href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="#main-menu-toggle" class="backdrop" hidden></a>
 
-      <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
-        <span class="fa fa-bars fa-3x" aria-hidden="true"></span>
-    </a>
-    </div>
-  </header>
-  <main>
-    <section class="about__artist slide">
-      <div class="about-img">
-        <img src="./img/demo1/10.jpg" alt="bachata artist">
-        <div class="reveal-img"></div>
-      </div>
-      <div class="about-desc">
-          <div class="about-title">
-            <h2>About Rezi <span class="about__artist--span">Sensual Bachata</span></h2>
-            <div class="about__swipe t-swipe1"></div>
+  <body  data-barba="wrapper">
+    <header id="home">
+      <nav id="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <button class="nav-toggle" href="#main-menu-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <img src="./white.png" class="logo" alt="logo" />
+            
           </div>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus deserunt debitis voluptatem quos placeat aliquam veritatis ea at, quo modi tempora nihil aperiam in quia nostrum similique quae ipsum. Cupiditate!</p>
-          <a class="explore about__artist-explore">watch</a>
-          <div class="reveal-text"></div>
-      </div>
-    </section>
-    <section class="about__bachafuria slide">
-      <div class="about-img">
-        <img src="./img/demo1/11.jpg" alt="bachata artist">
-        <div class="reveal-img"></div>
-      </div>
-          <div class="about-desc">
-            <div class="about-title">
-              <h2>About BachaFuria Group <span class="about__bachafuria--span">Sensual Bachata</span></h2>
-              <div class="about__swipe t-swipe2"></div>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus facilis explicabo quisquam animi non reprehenderit laborum corrupti natus quod ea voluptatibus aperiam, error repellat exercitationem incidunt commodi excepturi dignissimos sit?</p>
-            <a class="explore about__bachafuria-explore">watch</a>
-            <div class="reveal-text"></div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="index.html" class="nav__link">home</a>
+              </li>
+              <li>
+                <a href="about.html" class="nav__link">About us</a>
+              </li>
+              <li>
+                <a href="#events" class="nav__link">Events</a>
+              </li>
+              <li>
+                <a href="#classes" class="nav__link">classes</a>
+              </li>
+              <li>
+                <a href="#tickets" class="nav__link">Tickets</a>
+              </li>
+              <li>
+                <a href="gallery.html" class="nav__link">Gallery</a>
+              </li>
+              <li>
+                <a href="#contact" class="nav__link">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        
-    </section>
-    <section class="about__artist slide">
-      <div class="about-img">
-        <img src="./img/demo1/12.jpg" alt="bachata artist">
-        <div class="reveal-img"></div>
-      </div>
-      <div class="about-desc">
-          <div class="about-title">
-            <h2>About Bachata King Festival <span class="about__bachataking--span">Sensual Bachata</span></h2>
-            <div class="about__swipe t-swipe3"></div>
+      </nav>
+     
+    </header>
+    <main data-barba="container" data-barba-namespace="about">
+      <section class="header">
+        <div class="header__text-container">
+          <h1 class="primary-heading">
+            <span class="primary-heading--main">Welcome To BachaFuria</span>
+            <span class="primary-heading--sub">Your Favourite Bachata Community</span>
+          </h1>
+  
+          <a href="#" class="btn btn--white btn--animated">Discover</a>
+        </div>
+      </section>
+      <section class="about-bachafuria">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary u-heading-bg-image-dark">
+            What we are about
+          </h2>
+        </div>
+          <div class="grid-bachafuria">
+            <div class="text-bachafuria">
+              <h3 class="heading-tertiary u-margin-bottom-small">Fall in Love with Dance</h3>
+              <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus error, pariatur amet id sed et enim, fuga soluta aliquid mollitia modi corporis, ea perferendis quod quisquam accusantium asperiores magni quam.</p>
+
+              <h3 class="heading-tertiary u-margin-bottom-small">Express Like you have never before</h3>
+              <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus error, pariatur amet id sed et enim, fuga soluta aliquid mollitia modi corporis.</p>
+
+              <a href="#" class="btn-text">Learn more &rarr;</a>
+            </div>
+            <div class="image-bachafuria">
+              <div class="composition">
+                <img src="img/demo3/10.jpg" alt="photo 1" class="composition__photo composition__photo--p1">
+                <img src="img/demo3/11.jpg" alt="photo 2" class="composition__photo composition__photo--p2">
+                <img src="img/demo3/12.jpg" alt="photo 3" class="composition__photo composition__photo--p3">
+              </div>
+            </div>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus facilis explicabo quisquam animi non reprehenderit laborum corrupti natus quod ea voluptatibus aperiam, error repellat exercitationem incidunt commodi excepturi dignissimos sit?</p>
-          <a class="explore about__bachataking-explore">watch</a>
-          <div class="reveal-text"></div>
-      </div>
-    </section>
-  </main>
+      </section>
+      <section class="team-bachafuria">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary u-heading-bg-image-light">
+            Meet our Team
+          </h2> 
+        </div>
+        <div class="card-bachafuria">
+          <div class="lead-bachafuria">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--4">&nbsp;</div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--1">Rezi Ademi</span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>sensual</li>
+                    <li>passionate</li>
+                    <li>such</li>
+                    <li>a</li>
+                    <li>bitch</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back-1">
+               <div class="card__profile">
+                <h4 class="card__heading card__heading-back">
+                  <span class="card__heading-span card__heading-span--1">Follow us</span>
+                </h4>
+                <div class="card__details-back">
+                  <ul>
+                    <li><a><i class="fab fa-instagram fa-2x"></i></a></li>
+                    <li><a><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                    <li><a><i class="fab fa-youtube fa-2x"></i></a></li>
+                  </ul>
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-members-bachafuria-2">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--5">&nbsp;</div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--1">Kiruba Karan</span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>sensual</li>
+                    <li>passionate</li>
+                    <li>such</li>
+                    <li>a</li>
+                    <li>bitch</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back-1">
+               <div class="card__profile">
+                <h4 class="card__heading card__heading-back">
+                  <span class="card__heading-span card__heading-span--1">Follow us</span>
+                </h4>
+                <div class="card__details-back">
+                  <ul>
+                    <li><a><i class="fab fa-instagram fa-2x"></i></a></li>
+                    <li><a><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                    <li><a><i class="fab fa-youtube fa-2x"></i></a></li>
+                  </ul>
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-members-bachafuria-3">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <div class="card__picture card__picture--6">&nbsp;</div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span card__heading-span--1">Duarte monterio</span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>sensual</li>
+                    <li>passionate</li>
+                    <li>such</li>
+                    <li>a</li>
+                    <li>bitch</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back card__side--back-1">
+               <div class="card__profile">
+                <h4 class="card__heading card__heading-back">
+                  <span class="card__heading-span card__heading-span--1">Follow us</span>
+                </h4>
+                <div class="card__details-back">
+                  <ul>
+                    <li><a><i class="fab fa-instagram fa-2x"></i></a></li>
+                    <li><a><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                    <li><a><i class="fab fa-youtube fa-2x"></i></a></li>
+                  </ul>
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer footer__section">
+        <p>
+          copyright &copy; BachaFuria Dance Company
+          <span id="date"></span>. all rights reserved
+        </p>
+      </section>
+    </main>
+  <!-- <footer class="footer footer__section">
+    <p>
+      copyright &copy; BachaFuria Dance Company
+      <span id="date"></span>. all rights reserved
+    </p>
+  </footer> -->
   <div class="cursor">
     <span class="cursor--text"></span>
   </div>
+   <!-- back to top button -->
+   <a href="#home" class="scoll-link top-link">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <!-- transition animation -->
+  <div class="swipe swipe--1"></div>
+  <div class="swipe swipe--2"></div>
+  <div class="swipe swipe--3"></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-  
+
+ 
 
   <script src="about.js"></script>
-</body>
+ 
+  </body>
+</html>

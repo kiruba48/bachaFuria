@@ -1,0 +1,20 @@
+.top-link {
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: $color-dark-white;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5rem;
+  color: $color-header;
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  z-index: -100;
+}
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}

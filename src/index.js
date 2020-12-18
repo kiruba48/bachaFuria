@@ -3,56 +3,86 @@ import barba from '@barba/core';
 import { testimonials } from './js/testimonial';
 import { revealSections } from './js/revealSections';
 import { enterAnimation, leaveAnimation, onceAnimation } from './js/transitionAnim';
+import { showTiles } from './js/tilesAnimation';
+import { formValidation } from './js/fromValidation';
+import { Products, UI, Storage } from './js/products';
 import gsap from 'gsap/gsap-core';
 
 
 
 
-// locomotive();
+// let scroll;
+// function locomotive(container) {
+//   // Initialize the Locomotive scroll
+//   if(scroll) {
+//     scroll.destroy()
+//   }
+//   scroll = new LocomotiveScroll({
+//     el: container.querySelector('[data-scroll-container]'),
+//     smooth: true
+//   });
+// }
 
 
 /****************** *******************/
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const app = () => {
   footerDate();
   // showTiles();
   // Animating nav slide
   navAnim(); //Links slide animation
+  formValidation();
 }
 app();
 
-
-let controller;
-let tilesScene;
-let t1;
-
-
-function showTiles() {
-  controller = new ScrollMagic.Controller();
-  document.body.style.overflow = 'auto';
-  document.scrollingElement.scrollTo(0, 0);
-      
-  gsap.utils.toArray('.tiles').forEach((section, index) => {
-        const tilesSection = section.querySelector('.tiles__line');
-        const [x, xEnd] = (index % 2) ? ['100%', (tilesSection.scrollWidth - section.offsetWidth) * -1] : [tilesSection.scrollWidth * -1, 0];
-        t1 = gsap.fromTo(tilesSection, { x }, { x:xEnd });
-        tilesScene = new ScrollMagic.Scene({
-          triggerElement:section,
-          duration: 1000,
-          offset: -100
-  })
-  .setTween(t1)
-  // .addIndicators({colorStart: 'white', colorTrigger: 'white', name: 'tiles'})
-  .addTo(controller)
-
-  })
-
-}
-
-
 /****************** *******************/
+
+/****************** Shopping Cart *******************/
+
+const cartBtnMobile = document.querySelector('.cart-btn--mobile');
+const cartBtnDesk = document.querySelector('.cart-btn--desk');
+const closeCartBtn = document.querySelector('.close-cart');
+const clearCartBtn = document.querySelector('.clear-cart');
+const cartDOM = document.querySelector('.cart');
+const cartOverlay = document.querySelector('.cart-overlay');
+const cartItems = document.querySelector('.cart-items');
+const cartTotal = document.querySelector('.cart-total');
+const cartContent = document.querySelector('.cart-content');
+// products part
+const productDOM = document.querySelector('.product-center');
+
+// cart data
+let cart = [];
+
+// Getting products
+// barba.hooks.once ((data) => {
+//   const ui = new UI();
+//   const products = new Products();
+//    // Fetch the products
+//   products.fetchProducts().then(data => console.log(data))
+ 
+// })
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const ui = new UI();
+  const products = new Products();
+
+  // Fetch the products
+  products.fetchProducts().then(data => console.log(data))
+                        
+})
+
+
+
+
+
+
+
 
 /****************** *******************/
 const links = document.querySelector('.links');
@@ -104,6 +134,8 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelector('.btn--show-modal');
+const labels = document.querySelectorAll('.label');
+const contactInputs = document.querySelectorAll('.input');
 
 const openModal = function (e) {
   e.preventDefault();
@@ -126,12 +158,37 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+// label animation
+labels.forEach(label => {
+  
+  const innerText = label.innerHTML.split('')
+                                   .map((letter, index) => `<span style = "transition-delay:${index * 50}ms">${letter}</span>`)
+                                   .join('')
+                         
+  label.innerHTML = innerText;
+ 
+})
+
+// contactInputs.forEach(input => {
+//   console.log(input.value)
+//   if(input.value === '') {
+//     const parent = input.parentElement;
+//     const [children1, children2] = parent.children;
+//     console.log(children2)
+//     const span = children2.children;
+//     console.log(span.length)
+//     // span.forEach(s => {
+//     //   s.style.transform = `translateY(-30px)`
+//     // })
+//   }
+// })
+
 
 /****************** *******************/
 
 // cursor animation
 window.addEventListener("mousemove", cursor);
-window.addEventListener("mouseover", cursorHover);
+// window.addEventListener("mouseover", cursorHover);
 
 /****************** *******************/
 barba.init({
@@ -142,6 +199,7 @@ barba.init({
        showTiles();
        testimonials();
        revealSections();
+       
       },
       beforeLeave() {
         tilesScene.destroy();
@@ -154,13 +212,15 @@ barba.init({
     {
       namespace: "about",
 
-    }
+    },
+   
   ],
   transitions: [
     {
-      name: 'custom-transition',
+      name: 'general-transition',
       once({current, next}) {
         onceAnimation();
+        
       },
       leave({current, next}) {
         let done = this.async();
@@ -175,33 +235,20 @@ barba.init({
       }
     },
     // {
-    //   name: 'home js init',
+    //   name: 'gallery-transition',
     //   to: {
-    //     namespace: ['home']
-    //   },
-    //   once() {
-    //     testimonials();
-    //     console.log('once')
-    //   },
-    //   leave(data) {
-    //     console.log('leave')
-    //     let done = this.async();
-    //     const tl = gsap.timeline({defaults: {ease: "power2.inOut"}});
-    //     tl.fromTo(data.current.container, { opacity: 1 }, { opacity: 0, duration: 1 });
-    //     tl.fromTo('.swipe', {x: '-100%'}, { x: '0%', duration: 0.75, onComplete: done }, "-=0.5");
-    //   },
-    //   enter(data) {
-    //     console.log('enter')
+    //     namespace: ['gallery'],
+    //     beforeEnter({ next }) {
 
-    //     testimonials();
-    //     let done = this.async();
-    //     //Scroll to the top
-    //     window.scrollTo(0, 0);
-    //     const tl = gsap.timeline({ defaults: {ease: "power2.inOut"} });
-    //     tl.fromTo('.swipe', {x: '0%'}, { x: '-100%', stagger: 0.5, duration: 1, onComplete: done });
-
-    //     tl.fromTo(data.next.container, { opacity: 0 }, { opacity: 1, duration: 0 })
-
+    //           // destroy the previous scroll
+    //           scroll.destroy();
+        
+    //           // init LocomotiveScroll regarding the next page
+    //           locomotive(next.container);
+    //         },
+    //     beforeLeave() {
+    //           scroll.destroy();
+    //         },
     //   }
     // }
    

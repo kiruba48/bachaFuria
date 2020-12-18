@@ -4,21 +4,21 @@ import barba from '@barba/core';
 
 
 /****************** *******************/
-const imagesLoaded = require('imagesloaded');
+// const imagesLoaded = require('imagesloaded');
 
-const preloadImages = (selector = img) => {
-  return new Promise(resolve => {
-    imagesLoaded(document.querySelectorAll(selector), {background: true}, resolve)
-  })
-}
-let scroll;
-function locomotive() {
-  // Initialize the Locomotive scroll
-   scroll = new LocomotiveScroll({
-   el: document.querySelector('[data-scroll-container]'),
-   smooth: true
-});
-}
+// const preloadImages = (selector = img) => {
+//   return new Promise(resolve => {
+//     imagesLoaded(document.querySelectorAll(selector), {background: true}, resolve)
+//   })
+// }
+// let scroll;
+// function locomotive(container) {
+//   // Initialize the Locomotive scroll
+//    scroll = new LocomotiveScroll({
+//    el: container.querySelector('[data-scroll-container]'),
+//    smooth: true
+// });
+// }
 /****************** *******************/
 
 /****************** *******************/
@@ -130,7 +130,7 @@ function pageTransition() {
 
 
 
-export { preloadImages, cursor, cursorHover, footerDate, navToggleBar, fixedNavBar, locomotive, navAnim, pageTransition };
+export {  cursor, cursorHover, footerDate, navToggleBar, fixedNavBar, navAnim, pageTransition };
 
 
 

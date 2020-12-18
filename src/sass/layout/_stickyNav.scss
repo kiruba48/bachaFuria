@@ -9,6 +9,10 @@ nav {
   }
 
   .nav-center {
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+
     @include respond(tab-land) {
       width: 90vw;
       max-width: 1170px;
@@ -22,6 +26,7 @@ nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      // display: inline-block;
 
       @include respond(tab-land) {
         padding: 0;
@@ -45,6 +50,52 @@ nav {
 
         &:hover {
           color: hsl(182, 63%, 54%);
+        }
+      }
+    }
+
+    .cart-btn--mobile {
+      position: relative;
+      cursor: pointer;
+      order: 1;
+
+      .cart-icon {
+        font-size: 1.6rem;
+      }
+      .cart-items {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: $color-header;
+        padding: 0 5px;
+        border-radius: 30%;
+        color: $color-dark-white;
+      }
+
+      @include respond(tab-land) {
+        display: none;
+      }
+    }
+
+    .cart-btn--desk {
+      display: none;
+      @include respond(tab-land) {
+        display: initial;
+        position: relative;
+        cursor: pointer;
+        order: 1;
+
+        .cart-icon {
+          font-size: 1.6rem;
+        }
+        .cart-items {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          background: $color-header;
+          padding: 0 5px;
+          border-radius: 30%;
+          color: $color-dark-white;
         }
       }
     }
@@ -125,6 +176,25 @@ nav {
         }
       }
     }
+
+    // .cart-btn {
+    //   position: relative;
+    //   cursor: pointer;
+    //   order: 1;
+
+    //   .cart-icon {
+    //     font-size: 1.6rem;
+    //   }
+    //   .cart-items {
+    //     position: absolute;
+    //     top: -8px;
+    //     right: -8px;
+    //     background: $color-header;
+    //     padding: 0 5px;
+    //     border-radius: 30%;
+    //     color: $color-dark-white;
+    //   }
+    // }
   }
 }
 

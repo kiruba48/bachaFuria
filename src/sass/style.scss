@@ -22,15 +22,19 @@
 @import "components/slider";
 @import "components/testimonials";
 @import "components/model";
+@import "components/highlight";
+@import "components/cart-item";
 
 // @import "layout/nav";
 @import "layout/stickyNav";
 @import "layout/upcomingEvents";
 @import "layout/testimonials";
 @import "layout/footer";
+@import "layout/cart";
 
 @import "pages/home";
 @import "pages/about";
 @import "pages/gallery";
+@import "pages/tickets";
 
 @import "vendor/locomotive";

@@ -110,6 +110,10 @@
   height: var(--tiles-height);
   position: relative;
   overflow: hidden;
+
+  &--clip {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .tiles--columns-rotated {
@@ -290,6 +294,10 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-style: normal;
+
+  &--clip {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .tiles__title--alt {

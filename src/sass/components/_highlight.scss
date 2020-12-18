@@ -1,0 +1,21 @@
+.highlight {
+  position: relative;
+}
+
+.highlight::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(220, 88, 72),
+    rgba(226, 226, 226, 0.103)
+  );
+}

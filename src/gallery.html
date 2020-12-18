@@ -11,81 +11,100 @@
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <header>
-      <div class="row">
-        <div>
-          <h2><a href="./index.html" class="logo">furia.</a></h2>
+  <body data-barba="wrapper">
+    <header id="home">
+      <nav id="nav" class="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <button class="nav-toggle" href="#main-menu-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <img src="./white.png" class="logo" alt="logo" />
+            
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="index.html" class="nav__link">home</a>
+              </li>
+              <li>
+                <a href="about.html" class="nav__link">About us</a>
+              </li>
+              <li>
+                <a href="#events" class="nav__link">Events</a>
+              </li>
+              <li>
+                <a href="#classes" class="nav__link">classes</a>
+              </li>
+              <li>
+                <a href="#tickets" class="nav__link">Tickets</a>
+              </li>
+              <li>
+                <a href="gallery.html" class="nav__link">Gallery</a>
+              </li>
+              <li>
+                <a href=""  class="nav__link btn--show-modal">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <nav id="main-menu" class="main-menu">
-          <a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
-            <span class="fa fa-close fa-1g" aria-hidden="true"></span>
-        </a>
-          <ul class="nav-links">
-            <li><a class="nav" href="index.html">Home</a></li>
-            <li><a class="nav" href="about.html">About</a></li>
-            <li><a class="nav" href="gallery.html">Gallery</a></li>
-            <li><a class="nav" href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <a href="#main-menu-toggle" class="backdrop" hidden></a>
-
-        <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
-          <span class="fa fa-bars fa-3x" aria-hidden="true"></span>
-        </a>
-      </div>
+      </nav>
     </header>
-    <main data-scroll-container>
-      <section class="tiles tiles--columns-rotated tiles--darker" id="grid">
-				<div class="tiles__wrap">
-					<div class="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid">
-						<div class="tiles__line-img" style="background-image:url(img/demo2/1.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/2.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/3.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/4.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/5.jpg)"></div>
-					</div>
-					<div class="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid">
-						<div class="tiles__line-img" style="background-image:url(img/demo2/5.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/6.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/7.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/8.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/9.jpg)"></div>
-					</div>
-					<div class="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid">
-						<div class="tiles__line-img" style="background-image:url(img/demo2/9.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/10.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/11.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/12.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/13.jpg)"></div>
-					</div>
-					<div class="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid">
-						<div class="tiles__line-img" style="background-image:url(img/demo2/13.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/14.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/15.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/16.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/17.jpg)"></div>
-					</div>
-					<div class="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid">
-						<div class="tiles__line-img" style="background-image:url(img/demo2/17.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/18.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/19.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/20.jpg)"></div>
-						<div class="tiles__line-img" style="background-image:url(img/demo2/1.jpg)"></div>
-					</div>
-				</div>
-				<h2 class="tiles__title">Gallery</h2>
-			</section>
+    <main data-barba="container" data-barba-namespace="gallery">      
+      <!-- <div data-scroll-container>
+        <section class="tiles tiles--columns-rotated tiles--darker" id="grid">
+          <div class="tiles__wrap">
+            <div class="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid">
+              <div class="tiles__line-img" style="background-image:url(img/demo2/1.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/2.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/3.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/4.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/5.jpg)"></div>
+            </div>
+            <div class="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid">
+              <div class="tiles__line-img" style="background-image:url(img/demo2/5.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/6.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/7.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/8.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/9.jpg)"></div>
+            </div>
+            <div class="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid">
+              <div class="tiles__line-img" style="background-image:url(img/demo2/9.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/10.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/11.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/12.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/13.jpg)"></div>
+            </div>
+            <div class="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid">
+              <div class="tiles__line-img" style="background-image:url(img/demo2/13.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/14.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/15.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/16.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/17.jpg)"></div>
+            </div>
+            <div class="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid">
+              <div class="tiles__line-img" style="background-image:url(img/demo2/17.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/18.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/19.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/20.jpg)"></div>
+              <div class="tiles__line-img" style="background-image:url(img/demo2/1.jpg)"></div>
+            </div>
+          </div>
+          <h2 class="tiles__title">Gallery</h2>
+        </section>
+      </div> -->
     </main>
-    <div class="cursor">
+    <!-- <div class="cursor">
       <span class="cursor--text"></span>
-    </div>
-
+    </div> -->
+<!-- 
     <scrip src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></scrip>
     <scrip src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></scrip>
-    
+     -->
       
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
   </body>
 
 </html>

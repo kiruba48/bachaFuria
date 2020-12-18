@@ -1,0 +1,105 @@
+.tickets-header {
+  min-height: calc(100vh - 100px);
+  background-image: url("img/IMG_6311.JPG");
+  background-size: cover;
+  background-position: top;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .banner {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 2rem;
+
+    .banner-title {
+      font-size: 3.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      margin-bottom: 3rem;
+      color: $color-background;
+    }
+  }
+}
+
+.products {
+  padding: 4rem 0;
+
+  .section-title h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+  }
+
+  .products-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+
+    .product {
+      .img-container {
+        position: relative;
+        overflow: hidden;
+
+        .product-img {
+          display: block;
+          width: 100%;
+          min-height: 12rem;
+          transition: all 0.3s linear;
+        }
+
+        .bag-btn {
+          position: absolute;
+          top: 70%;
+          right: 0;
+          background: #f09d51;
+          border: none;
+          text-transform: uppercase;
+          padding: 0.5rem 0.75rem;
+          letter-spacing: 0.1rem;
+          transition: all 0.3s linear;
+          transform: translateX(101%);
+          cursor: pointer;
+
+          &:hover {
+            color: $color-dark-white;
+          }
+
+          .fa-shopping-cart {
+            margin-right: 0.5rem;
+          }
+        }
+
+        &:hover .bag-btn {
+          transform: translateX(0);
+        }
+
+        &:hover .product-img {
+          opacity: 0.5;
+        }
+      }
+
+      h3 {
+        text-transform: capitalize;
+        font-size: 1.1rem;
+        margin-top: 1rem;
+        letter-spacing: 0.1rem;
+        text-align: center;
+      }
+      h4 {
+        margin-top: 0.7rem;
+        letter-spacing: 0.1rem;
+        color: #f09d51;
+        text-align: center;
+      }
+    }
+  }
+}

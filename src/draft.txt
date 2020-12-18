@@ -1,3 +1,74 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "Mens Styling",
+        "price": 8,
+        "image": { "fields": { "file": { "url": "./src/img/IMG_6311.JPG" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "Lady's Styling",
+        "price": 8,
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "Partner work classes",
+        "price": 8,
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "Uni performance Team",
+        "price": 8,
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "Performance Team",
+        "price": 10,
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "Men's Styling Student",
+        "price": 6,
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "Women's Styling Student",
+        "price": 6,
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "Partner work Student",
+        "price": 6,
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
+      }
+    }
+  ]
+}
+
+
+
 <html>
   <head>
     <title>BachaFuria</title>

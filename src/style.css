@@ -2552,10 +2552,10 @@ nav .nav-center .cart-btn--mobile .cart-items {
   position: absolute;
   top: -8px;
   right: -8px;
-  background: #282829;
+  background: #e2e2e2;
   padding: 0 5px;
   border-radius: 30%;
-  color: #e2e2e2;
+  color: #282829;
 }
 
 @media only screen and (min-width: 900px) {
@@ -2584,10 +2584,10 @@ nav .nav-center .cart-btn--desk {
     position: absolute;
     top: -8px;
     right: -8px;
-    background: #282829;
+    background: #e2e2e2;
     padding: 0 5px;
     border-radius: 30%;
-    color: #e2e2e2;
+    color: #282829;
   }
 }
 
@@ -2843,7 +2843,7 @@ nav .nav-center .links-container .links .nav__link:link, nav .nav-center .links-
   color: #17181a;
 }
 
-.showCart {
+.show-cart {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }

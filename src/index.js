@@ -5,7 +5,7 @@ import { revealSections } from './js/revealSections';
 import { enterAnimation, leaveAnimation, onceAnimation } from './js/transitionAnim';
 import { showTiles } from './js/tilesAnimation';
 import { formValidation } from './js/fromValidation';
-import { Products, UI, Storage } from './js/products';
+import { products, ui, Storage } from './js/products';
 import gsap from 'gsap/gsap-core';
 
 
@@ -34,6 +34,8 @@ const app = () => {
   // Animating nav slide
   navAnim(); //Links slide animation
   formValidation();
+  ui.setupAPP()
+  ui.cartLogic()
 }
 app();
 
@@ -45,37 +47,56 @@ const cartBtnMobile = document.querySelector('.cart-btn--mobile');
 const cartBtnDesk = document.querySelector('.cart-btn--desk');
 const closeCartBtn = document.querySelector('.close-cart');
 const clearCartBtn = document.querySelector('.clear-cart');
-const cartDOM = document.querySelector('.cart');
+// const cartDOM = document.querySelector('.cart');
 const cartOverlay = document.querySelector('.cart-overlay');
-const cartItems = document.querySelector('.cart-items');
-const cartTotal = document.querySelector('.cart-total');
-const cartContent = document.querySelector('.cart-content');
 // products part
-const productDOM = document.querySelector('.product-center');
+// const productDOM = document.querySelector('.product-center');
 
-// cart data
-let cart = [];
+function showCart() {
+  const cartDOM = document.querySelector('.cart');
+  const cartOverlay = document.querySelector('.cart-overlay');
+
+  cartOverlay.classList.add('transparentBcg');
+  // cartDOM.classList.add('show-cart');
+  cartDOM.style.transform = 'translateX(0)';
+}
+
+function closeCart() {
+  const cartDOM = document.querySelector('.cart');
+  const cartOverlay = document.querySelector('.cart-overlay');
+
+  cartOverlay.classList.remove('transparentBcg');
+  // cartDOM.classList.add('show-cart');
+  cartDOM.style.transform = 'translateX(100%)';
+}
+
+cartBtnDesk.addEventListener('click', showCart);
+cartBtnMobile.addEventListener('click', showCart);
+closeCartBtn.addEventListener('click', closeCart);
+// cartOverlay.addEventListener('click', closeCart);
+
 
 // Getting products
 // barba.hooks.once ((data) => {
-//   const ui = new UI();
-//   const products = new Products();
-//    // Fetch the products
-//   products.fetchProducts().then(data => console.log(data))
- 
+//   function productDisplay() {
+//     products.fetchProducts().then(products => ui.displayProducts(products))
+//   }
+//  productDisplay();
 // })
 
 
+ // Fetch the products
+ function productDisplay() {
+  products.fetchProducts().then(products => {
+    ui.displayProducts(products)
+    Storage.saveProducts(products)
 
+    // ui.setupAPP()
+  }). then(() => {
+    ui.getBagButtons()
+  })
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-  const ui = new UI();
-  const products = new Products();
-
-  // Fetch the products
-  products.fetchProducts().then(data => console.log(data))
-                        
-})
 
 
 
@@ -199,7 +220,8 @@ barba.init({
        showTiles();
        testimonials();
        revealSections();
-       
+      //  ui.setupAPP();
+      // productDisplay()
       },
       beforeLeave() {
         tilesScene.destroy();
@@ -212,6 +234,13 @@ barba.init({
     {
       namespace: "about",
 
+    },
+    {
+      namespace: "tickets",
+      beforeEnter() {
+        productDisplay()
+       },
+       
     },
    
   ],
@@ -235,20 +264,17 @@ barba.init({
       }
     },
     // {
-    //   name: 'gallery-transition',
+    //   name: 'tickets-transition',
     //   to: {
-    //     namespace: ['gallery'],
-    //     beforeEnter({ next }) {
-
-    //           // destroy the previous scroll
-    //           scroll.destroy();
-        
-    //           // init LocomotiveScroll regarding the next page
-    //           locomotive(next.container);
+    //     namespace: ['tickets'],
+    //     after() {
+    //       productDisplay()
     //         },
-    //     beforeLeave() {
-    //           scroll.destroy();
-    //         },
+    //     // beforeEnter() {
+    //     //   productDisplay()
+              
+    //     //     },
+       
     //   }
     // }
    

@@ -5,7 +5,7 @@
       "fields": {
         "title": "Men's Styling",
         "price": 8,
-        "image": { "fields": { "file": { "url": "./src/img/IMG_6311.JPG" } } }
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
       }
     },
     {
@@ -13,7 +13,7 @@
       "fields": {
         "title": "Lady's Styling",
         "price": 8,
-        "image": { "fields": { "file": { "url": "./src/img/IMG_6311.JPG" } } }
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
       }
     },
     {
@@ -21,7 +21,7 @@
       "fields": {
         "title": "Partner work classes",
         "price": 8,
-        "image": { "fields": { "file": { "url": "./src/img/IMG_6311.JPG" } } }
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
       }
     },
     {
@@ -29,7 +29,7 @@
       "fields": {
         "title": "Uni performance Team",
         "price": 8,
-        "image": { "fields": { "file": { "url": "./src/img/IMG_6311.JPG" } } }
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
       }
     },
     {
@@ -37,7 +37,7 @@
       "fields": {
         "title": "Performance Team",
         "price": 10,
-        "image": { "fields": { "file": { "url": "./src/img/IMG_6311.JPG" } } }
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
       }
     },
     {
@@ -45,7 +45,7 @@
       "fields": {
         "title": "Men's Styling Student",
         "price": 6,
-        "image": { "fields": { "file": { "url": "./src/img/IMG_6311.JPG" } } }
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
       }
     },
     {
@@ -53,7 +53,7 @@
       "fields": {
         "title": "Women's Styling Student",
         "price": 6,
-        "image": { "fields": { "file": { "url": "./src/img/IMG_6311.JPG" } } }
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
       }
     },
     {
@@ -61,7 +61,7 @@
       "fields": {
         "title": "Partner work Student",
         "price": 6,
-        "image": { "fields": { "file": { "url": "./src/img/IMG_6311.JPG" } } }
+        "image": { "fields": { "file": { "url": "./img/IMG_6311.JPG" } } }
       }
     }
   ]

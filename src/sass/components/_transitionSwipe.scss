@@ -45,7 +45,8 @@
     width: 10%;
     color: $color-dark-white; //rgba(220, 87, 72, 0.719)
     font-size: 4rem;
-    font-family: "Abril Fatface";
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
     padding-top: 35rem;
 
     @include respond(tab-port) {

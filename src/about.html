@@ -3,8 +3,8 @@
   <head>
     <title>BachaFuria</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
     <link
@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body  data-barba="wrapper">
+  <body data-barba="wrapper">
     <header id="home">
-      <nav id="nav">
+      <nav id="nav" class="nav">
         <div class="nav-center">
           <!-- nav header -->
           <div class="nav-header">
@@ -25,8 +25,21 @@
               <i class="fas fa-bars"></i>
             </button>
             <img src="./white.png" class="logo" alt="logo" />
-            
+            <div class="cart-btn--mobile">
+              <span class="cart-icon">
+                <i class="fas fa-cart-plus"></i>
+              </span>
+              <div class="cart-items">0</div>
+            </div>
           </div>
+
+          <div class="cart-btn--desk">
+            <span class="cart-icon">
+              <i class="fas fa-cart-plus"></i>
+            </span>
+            <div class="cart-items">0</div>
+          </div>
+
           <!-- links -->
           <div class="links-container">
             <ul class="links">
@@ -43,28 +56,36 @@
                 <a href="#classes" class="nav__link">classes</a>
               </li>
               <li>
-                <a href="#tickets" class="nav__link">Tickets</a>
+                <a href="tickets.html" class="nav__link">Tickets</a>
               </li>
               <li>
                 <a href="gallery.html" class="nav__link">Gallery</a>
               </li>
               <li>
-                <a href="#contact" class="nav__link">Contact</a>
+                <a href="#" class="nav__link btn--show-modal">Contact</a>
               </li>
             </ul>
           </div>
+          <!-- </div> -->
+          <!-- <div class="cart-btn">
+            <span class="cart-icon">
+              <i class="fas fa-cart-plus"></i>
+            </span>
+            <div class="cart-items">0</div>
+          </div> -->
         </div>
       </nav>
-     
     </header>
     <main data-barba="container" data-barba-namespace="about">
       <section class="header">
         <div class="header__text-container">
           <h1 class="primary-heading">
             <span class="primary-heading--main">Welcome To BachaFuria</span>
-            <span class="primary-heading--sub">Your Favourite Bachata Community</span>
+            <span class="primary-heading--sub"
+              >Your Favourite Bachata Community</span
+            >
           </h1>
-  
+
           <a href="#" class="btn btn--white btn--animated">Discover</a>
         </div>
       </section>
@@ -74,30 +95,55 @@
             What we are about
           </h2>
         </div>
-          <div class="grid-bachafuria">
-            <div class="text-bachafuria">
-              <h3 class="heading-tertiary u-margin-bottom-small">Fall in Love with Dance</h3>
-              <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus error, pariatur amet id sed et enim, fuga soluta aliquid mollitia modi corporis, ea perferendis quod quisquam accusantium asperiores magni quam.</p>
+        <div class="grid-bachafuria">
+          <div class="text-bachafuria">
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Fall in Love with Dance
+            </h3>
+            <p class="paragraph">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
+              error, pariatur amet id sed et enim, fuga soluta aliquid mollitia
+              modi corporis, ea perferendis quod quisquam accusantium asperiores
+              magni quam.
+            </p>
 
-              <h3 class="heading-tertiary u-margin-bottom-small">Express Like you have never before</h3>
-              <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus error, pariatur amet id sed et enim, fuga soluta aliquid mollitia modi corporis.</p>
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Express Like you have never before
+            </h3>
+            <p class="paragraph">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
+              error, pariatur amet id sed et enim, fuga soluta aliquid mollitia
+              modi corporis.
+            </p>
 
-              <a href="#" class="btn-text">Learn more &rarr;</a>
-            </div>
-            <div class="image-bachafuria">
-              <div class="composition">
-                <img src="img/demo3/10.jpg" alt="photo 1" class="composition__photo composition__photo--p1">
-                <img src="img/demo3/11.jpg" alt="photo 2" class="composition__photo composition__photo--p2">
-                <img src="img/demo3/12.jpg" alt="photo 3" class="composition__photo composition__photo--p3">
-              </div>
+            <a href="#" class="btn-text">Learn more &rarr;</a>
+          </div>
+          <div class="image-bachafuria">
+            <div class="composition">
+              <img
+                src="img/demo3/10.jpg"
+                alt="photo 1"
+                class="composition__photo composition__photo--p1"
+              />
+              <img
+                src="img/demo3/11.jpg"
+                alt="photo 2"
+                class="composition__photo composition__photo--p2"
+              />
+              <img
+                src="img/demo3/12.jpg"
+                alt="photo 3"
+                class="composition__photo composition__photo--p3"
+              />
             </div>
           </div>
+        </div>
       </section>
       <section class="team-bachafuria">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary u-heading-bg-image-light">
             Meet our Team
-          </h2> 
+          </h2>
         </div>
         <div class="card-bachafuria">
           <div class="lead-bachafuria">
@@ -105,7 +151,9 @@
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--4">&nbsp;</div>
                 <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--1">Rezi Ademi</span>
+                  <span class="card__heading-span card__heading-span--1"
+                    >Rezi Ademi</span
+                  >
                 </h4>
                 <div class="card__details">
                   <ul>
@@ -113,23 +161,31 @@
                     <li>passionate</li>
                     <li>such</li>
                     <li>a</li>
-                    <li>bitch</li>
+                    <li>Dancer</li>
                   </ul>
                 </div>
               </div>
               <div class="card__side card__side--back card__side--back-1">
-               <div class="card__profile">
-                <h4 class="card__heading card__heading-back">
-                  <span class="card__heading-span card__heading-span--1">Follow us</span>
-                </h4>
-                <div class="card__details-back">
-                  <ul>
-                    <li><a><i class="fab fa-instagram fa-2x"></i></a></li>
-                    <li><a><i class="fab fa-facebook-square fa-2x"></i></a></li>
-                    <li><a><i class="fab fa-youtube fa-2x"></i></a></li>
-                  </ul>
+                <div class="card__profile">
+                  <h4 class="card__heading card__heading-back">
+                    <span class="card__heading-span card__heading-span--1"
+                      >Follow us</span
+                    >
+                  </h4>
+                  <div class="card__details-back">
+                    <ul>
+                      <li>
+                        <a><i class="fab fa-instagram fa-2x"></i></a>
+                      </li>
+                      <li>
+                        <a><i class="fab fa-facebook-square fa-2x"></i></a>
+                      </li>
+                      <li>
+                        <a><i class="fab fa-youtube fa-2x"></i></a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-               </div>
               </div>
             </div>
           </div>
@@ -138,7 +194,9 @@
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--5">&nbsp;</div>
                 <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--1">Kiruba Karan</span>
+                  <span class="card__heading-span card__heading-span--1"
+                    >Kiruba Karan</span
+                  >
                 </h4>
                 <div class="card__details">
                   <ul>
@@ -146,23 +204,31 @@
                     <li>passionate</li>
                     <li>such</li>
                     <li>a</li>
-                    <li>bitch</li>
+                    <li>Dancer</li>
                   </ul>
                 </div>
               </div>
               <div class="card__side card__side--back card__side--back-1">
-               <div class="card__profile">
-                <h4 class="card__heading card__heading-back">
-                  <span class="card__heading-span card__heading-span--1">Follow us</span>
-                </h4>
-                <div class="card__details-back">
-                  <ul>
-                    <li><a><i class="fab fa-instagram fa-2x"></i></a></li>
-                    <li><a><i class="fab fa-facebook-square fa-2x"></i></a></li>
-                    <li><a><i class="fab fa-youtube fa-2x"></i></a></li>
-                  </ul>
+                <div class="card__profile">
+                  <h4 class="card__heading card__heading-back">
+                    <span class="card__heading-span card__heading-span--1"
+                      >Follow us</span
+                    >
+                  </h4>
+                  <div class="card__details-back">
+                    <ul>
+                      <li>
+                        <a><i class="fab fa-instagram fa-2x"></i></a>
+                      </li>
+                      <li>
+                        <a><i class="fab fa-facebook-square fa-2x"></i></a>
+                      </li>
+                      <li>
+                        <a><i class="fab fa-youtube fa-2x"></i></a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-               </div>
               </div>
             </div>
           </div>
@@ -171,7 +237,9 @@
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--6">&nbsp;</div>
                 <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--1">Duarte monterio</span>
+                  <span class="card__heading-span card__heading-span--1"
+                    >Duarte monterio</span
+                  >
                 </h4>
                 <div class="card__details">
                   <ul>
@@ -179,23 +247,31 @@
                     <li>passionate</li>
                     <li>such</li>
                     <li>a</li>
-                    <li>bitch</li>
+                    <li>Dancer</li>
                   </ul>
                 </div>
               </div>
               <div class="card__side card__side--back card__side--back-1">
-               <div class="card__profile">
-                <h4 class="card__heading card__heading-back">
-                  <span class="card__heading-span card__heading-span--1">Follow us</span>
-                </h4>
-                <div class="card__details-back">
-                  <ul>
-                    <li><a><i class="fab fa-instagram fa-2x"></i></a></li>
-                    <li><a><i class="fab fa-facebook-square fa-2x"></i></a></li>
-                    <li><a><i class="fab fa-youtube fa-2x"></i></a></li>
-                  </ul>
+                <div class="card__profile">
+                  <h4 class="card__heading card__heading-back">
+                    <span class="card__heading-span card__heading-span--1"
+                      >Follow us</span
+                    >
+                  </h4>
+                  <div class="card__details-back">
+                    <ul>
+                      <li>
+                        <a><i class="fab fa-instagram fa-2x"></i></a>
+                      </li>
+                      <li>
+                        <a><i class="fab fa-facebook-square fa-2x"></i></a>
+                      </li>
+                      <li>
+                        <a><i class="fab fa-youtube fa-2x"></i></a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-               </div>
               </div>
             </div>
           </div>
@@ -204,7 +280,9 @@
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--4">&nbsp;</div>
                 <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--1">Rezi Ademi</span>
+                  <span class="card__heading-span card__heading-span--1"
+                    >Rezi Ademi</span
+                  >
                 </h4>
                 <div class="card__details">
                   <ul>
@@ -212,23 +290,31 @@
                     <li>passionate</li>
                     <li>such</li>
                     <li>a</li>
-                    <li>bitch</li>
+                    <li>Dancer</li>
                   </ul>
                 </div>
               </div>
               <div class="card__side card__side--back card__side--back-1">
-               <div class="card__profile">
-                <h4 class="card__heading card__heading-back">
-                  <span class="card__heading-span card__heading-span--1">Follow us</span>
-                </h4>
-                <div class="card__details-back">
-                  <ul>
-                    <li><a><i class="fab fa-instagram fa-2x"></i></a></li>
-                    <li><a><i class="fab fa-facebook-square fa-2x"></i></a></li>
-                    <li><a><i class="fab fa-youtube fa-2x"></i></a></li>
-                  </ul>
+                <div class="card__profile">
+                  <h4 class="card__heading card__heading-back">
+                    <span class="card__heading-span card__heading-span--1"
+                      >Follow us</span
+                    >
+                  </h4>
+                  <div class="card__details-back">
+                    <ul>
+                      <li>
+                        <a><i class="fab fa-instagram fa-2x"></i></a>
+                      </li>
+                      <li>
+                        <a><i class="fab fa-facebook-square fa-2x"></i></a>
+                      </li>
+                      <li>
+                        <a><i class="fab fa-youtube fa-2x"></i></a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-               </div>
               </div>
             </div>
           </div>
@@ -237,7 +323,9 @@
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--4">&nbsp;</div>
                 <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--1">Rezi Ademi</span>
+                  <span class="card__heading-span card__heading-span--1"
+                    >Rezi Ademi</span
+                  >
                 </h4>
                 <div class="card__details">
                   <ul>
@@ -245,23 +333,31 @@
                     <li>passionate</li>
                     <li>such</li>
                     <li>a</li>
-                    <li>bitch</li>
+                    <li>Dancer</li>
                   </ul>
                 </div>
               </div>
               <div class="card__side card__side--back card__side--back-1">
-               <div class="card__profile">
-                <h4 class="card__heading card__heading-back">
-                  <span class="card__heading-span card__heading-span--1">Follow us</span>
-                </h4>
-                <div class="card__details-back">
-                  <ul>
-                    <li><a><i class="fab fa-instagram fa-2x"></i></a></li>
-                    <li><a><i class="fab fa-facebook-square fa-2x"></i></a></li>
-                    <li><a><i class="fab fa-youtube fa-2x"></i></a></li>
-                  </ul>
+                <div class="card__profile">
+                  <h4 class="card__heading card__heading-back">
+                    <span class="card__heading-span card__heading-span--1"
+                      >Follow us</span
+                    >
+                  </h4>
+                  <div class="card__details-back">
+                    <ul>
+                      <li>
+                        <a><i class="fab fa-instagram fa-2x"></i></a>
+                      </li>
+                      <li>
+                        <a><i class="fab fa-facebook-square fa-2x"></i></a>
+                      </li>
+                      <li>
+                        <a><i class="fab fa-youtube fa-2x"></i></a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-               </div>
               </div>
             </div>
           </div>
@@ -275,30 +371,140 @@
         </p>
       </section>
     </main>
-  <!-- <footer class="footer footer__section">
+    <!-- <footer class="footer footer__section">
     <p>
       copyright &copy; BachaFuria Dance Company
       <span id="date"></span>. all rights reserved
     </p>
   </footer> -->
-  <div class="cursor">
-    <span class="cursor--text"></span>
-  </div>
-   <!-- back to top button -->
-   <a href="#home" class="scoll-link top-link">
-    <i class="fas fa-arrow-up"></i>
-  </a>
-  <!-- transition animation -->
-  <div class="swipe swipe--1"></div>
-  <div class="swipe swipe--2"></div>
-  <div class="swipe swipe--3"></div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <!-- model -->
+    <div class="modal hidden" id="modal">
+      <button class="btn--close-modal">&times;</button>
 
- 
+      <div class="contact-info">
+        <h2 class="modal__header">
+          wanna get in touch <br />
+          start <span class="highlight">Dancing</span>
+        </h2>
+        <div class="info">
+          <div class="information">
+            <i class="icon icon-basic-notebook"></i>
 
-  <script src="about.js"></script>
- 
+            <p>92 Cherry Drive Uniondale, NE8 3QZ</p>
+          </div>
+          <div class="information">
+            <i class="icon icon-basic-mail"></i>
+            <p>lorem@ipsum.com</p>
+          </div>
+          <div class="information">
+            <i class="icon icon-basic-smartphone"></i>
+
+            <p>123-456-789</p>
+          </div>
+        </div>
+        <div class="social-media">
+          <p>Connect with us :</p>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form id="form">
+          <h2 class="modal__header">
+            <span class="highlight">Contact us</span>
+          </h2>
+
+          <div class="input-container">
+            <input id="fullname" type="text" name="Fullname" class="input" />
+            <label class="label" for="fullname">Fullname</label>
+            <small>Error message</small>
+          </div>
+          <div class="input-container">
+            <input id="contact-email" type="email" name="Email" class="input" />
+            <label class="label" for="contact-email">Email</label>
+            <small>Error message</small>
+          </div>
+          <div class="input-container">
+            <input id="phone" type="tel" name="Phone" class="input" />
+            <label class="label" for="phone">Phone</label>
+            <small>Error message</small>
+          </div>
+          <div class="input-container textarea">
+            <textarea id="message" name="message" class="input"></textarea>
+            <label class="label" for="message">Message</label>
+          </div>
+          <button class="btn">send</button>
+
+          <!-- <input type="submit" value="Send" class="btn" /> -->
+        </form>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <!-- cart -->
+    <div class="cart-overlay">
+      <div class="cart">
+        <span class="close-cart">
+          <i class="fas fa-window-close"></i>
+        </span>
+        <h2>your cart</h2>
+        <div class="cart-content">
+          <!-- cart-item -->
+          <!-- <div class="cart-item">
+          <img src="./img/IMG_6311.JPG" alt="product">
+          <div>
+            <h4>Styling</h4>
+            <h5>£7</h5>
+            <span class="remove-item">remove</span>
+          </div>
+          <div>
+            <i class="fas fa-chevron-up"></i>
+            <p class="item-amount">1</p>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div> -->
+          <!--end of cart-item -->
+        </div>
+        <div class="cart-footer">
+          <h3>your total : £ <span class="cart-total">0</span></h3>
+          <button class="clear-cart banner-btn">clear cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- end of cart -->
+    <div class="cursor">
+      <span class="cursor--text"></span>
+    </div>
+    <!-- back to top button -->
+    <a href="#home" class="scoll-link top-link">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <!-- transition animation -->
+    <div class="swipe swipe--1"></div>
+    <div class="swipe swipe--2"></div>
+    <div class="swipe swipe--3"></div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+    <script src="about.js"></script>
   </body>
 </html>

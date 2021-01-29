@@ -13,119 +13,112 @@
     />
     <link rel="stylesheet" href="./icon-font.css">
     <link rel="stylesheet" href="./style.css" />
-    <script defer src="tickets.js"></script>
+    <script defer src="events.js"></script>
 
   </head>
-<body data-barba="wrapper">
-  <header id="home">
-    <nav id="nav" class="nav">
-      <div class="nav-center">
-        <!-- nav header -->
-        <div class="nav-header">
-          <button class="nav-toggle" href="#main-menu-toggle">
-            <i class="fas fa-bars"></i>
-          </button>
-          <img src="./white.png" class="logo" alt="logo" />
-          <div class="cart-btn--mobile">
+  <body data-barba="wrapper">
+    <header id="home">
+      <nav id="nav" class="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <button class="nav-toggle" href="#main-menu-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <img src="./white.png" class="logo" alt="logo" />
+            <div class="cart-btn--mobile">
+              <span class="cart-icon">
+                <i class="fas fa-cart-plus"></i>
+              </span>
+              <div class="cart-items">0</div>
+            </div>
+          </div>
+
+          <div class="cart-btn--desk">
             <span class="cart-icon">
               <i class="fas fa-cart-plus"></i>
             </span>
             <div class="cart-items">0</div>
           </div>
-        </div>
 
-        <div class="cart-btn--desk">
-          <span class="cart-icon">
-            <i class="fas fa-cart-plus"></i>
-          </span>
-          <div class="cart-items">0</div>
-        </div>
-
-       
-        <!-- links -->
-        <div class="links-container">
-          <ul class="links">
-            <li>
-              <a href="index.html" class="nav__link">home</a>
-            </li>
-            <li>
-              <a href="about.html" class="nav__link">About us</a>
-            </li>
-            <li>
-              <a href="events.html" class="nav__link">Events</a>
-            </li>
-            <li>
-              <a href="#classes" class="nav__link">classes</a>
-            </li>
-            <li>
-              <a href="#tickets" class="nav__link">Tickets</a>
-            </li>
-            <li>
-              <a href="gallery.html" class="nav__link">Gallery</a>
-            </li>
-            <li>
-              <a href="#"  class="nav__link btn--show-modal">Contact</a>
-            </li>
-          </ul>
-        </div>
-      <!-- </div> -->
-        <!-- <div class="cart-btn">
-          <span class="cart-icon">
-            <i class="fas fa-cart-plus"></i>
-          </span>
-          <div class="cart-items">0</div>
-        </div> -->
-      </div>
-    </nav>
-  </header>
-
-  <main data-barba="container" data-barba-namespace="tickets">
-    <div class="tickets-header">
-      <div class="banner">
-        <h1 class="banner-title">BachaFuria Collection</h1>
-        <button class="btn btn--dark">shop now</button>
-      </div>
-    </div>
-
-    <section class="products">
-      <div class="section-title">
-        <h2>Our Classes</h2>
-      </div>
-      <div class="products-center">
-        <!-- hard code product -->
-        <!-- <article class="product">
-          <div class="img-container">
-            <img src="./img/IMG_6311.JPG" alt="class 1" class="product-img">
-            <button class="bag-btn" data-id="1">
-              <i class="fas fa-shopping-cart"></i>
-              add to cart
-            </button>
+         
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="index.html" class="nav__link">home</a>
+              </li>
+              <li>
+                <a href="about.html" class="nav__link">About us</a>
+              </li>
+              <li>
+                <a href="events.html" class="nav__link">Events</a>
+              </li>
+              <li>
+                <a href="#classes" class="nav__link">classes</a>
+              </li>
+              <li>
+                <a href="tickets.html" class="nav__link">Tickets</a>
+              </li>
+              <li>
+                <a href="gallery.html" class="nav__link">Gallery</a>
+              </li>
+              <li>
+                <a href="#"  class="nav__link btn--show-modal">Contact</a>
+              </li>
+            </ul>
           </div>
-          <h3>Styling</h3>
-          <h4>£7</h4>
-        </article>
-        <article class="product">
-          <div class="img-container">
-            <img src="./img/IMG_6311.JPG" alt="class 1" class="product-img">
-            <button class="bag-btn" data-id="1">
-              <i class="fas fa-shopping-cart"></i>
-              add to cart
-            </button>
-          </div>
-          <h3>Styling</h3>
-          <h4>£7</h4>
-        </article> -->
+        <!-- </div> -->
+          <!-- <div class="cart-btn">
+            <span class="cart-icon">
+              <i class="fas fa-cart-plus"></i>
+            </span>
+            <div class="cart-items">0</div>
+          </div> -->
+        </div>
+      </nav>
+    </header>
+    <main data-barba="container" data-barba-namespace="events">
+      <div class="tickets-header">
+        <div class="banner">
+          <h1 class="banner-title">BachaFuria Events</h1>
+          <p class="paragraph">All Events Cancelled</p>
+        </div>
       </div>
-    </section>
-    <section class="footer footer__section">
-      <p>
-        copyright &copy; BachaFuria Dance Company
-        <span id="date"></span>. all rights reserved
-      </p>
-    </section>
-  </main>
 
-  <!-- model -->
+      <div class="container">
+        <div class="calendar">
+          <div class="month">
+            <i class="fas fa-angle-left prev"></i>
+            <div class="date">
+              <h1></h1>
+              <p></p>
+            </div>
+            <i class="fas fa-angle-right next"></i>
+          </div>
+          <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="days">
+           
+          </div>
+        </div>
+      </div>
+      <section class="footer footer__section">
+        <p>
+          copyright &copy; BachaFuria Dance Company
+          <span id="date"></span>. all rights reserved
+        </p>
+      </section>
+    </main>
+
+    <!-- model -->
   <div class="modal hidden" id="modal">
     <button class="btn--close-modal">&times;</button>
     
@@ -243,6 +236,5 @@
   <a href="#home" class="scoll-link top-link">
     <i class="fas fa-arrow-up"></i>
   </a>
-
-</body>
+  </body>
 </html>

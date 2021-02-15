@@ -1768,19 +1768,19 @@ body {
 .swipe--1 {
   background-image: url(img/bachaFuriaImage/FB_IMG_1579866014213.jpg);
   background-size: cover;
-  z-index: 2000;
+  z-index: 200000;
 }
 
 .swipe--2 {
   background-image: url(img/bachaFuriaImage/FB_IMG_1606910316030.jpg);
   background-size: cover;
-  z-index: 1999;
+  z-index: 199999;
 }
 
 .swipe--3 {
   background-image: url(img/bachaFuriaImage/FB_IMG_1606910319277.jpg);
   background-size: cover;
-  z-index: 1998;
+  z-index: 199998;
 }
 
 .transition {

@@ -1,0 +1,17 @@
+$color-white: #fff;
+$color-background: #17181a;
+$color-header: #282829;
+$color-black: #111;
+$color-dark-white: #e2e2e2;
+$color-grey-dark-1: #999;
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: rgb(207, 204, 204);
+$color-span1: rgb(255, 139, 93);
+$color-span2: rgb(86, 124, 228);
+$color-span3: rgb(167, 110, 231);
+$heading-background-image-dark: linear-gradient(
+  to right,
+  #6e6767,
+  $color-background
+);
+$heading-background-image-light: linear-gradient(to right, #ffffff, #b9b6b6);

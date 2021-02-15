@@ -1,0 +1,69 @@
+.cursor {
+  display: none;
+  @include respond(desktop) {
+    display: initial;
+    width: 3.5rem;
+    height: 3.5rem;
+    // border: 2px solid white;
+    background-color: rgba(231, 187, 187, 0.698);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+    transition-property: background, transform;
+    transform-origin: 75% 75%;
+
+    .cursor--text {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      font-size: 0.75rem;
+      transform: translate(-50%, -50%);
+      color: $color-background;
+    }
+  }
+}
+
+.cursor.nav--active {
+  background: gray;
+  transform: scale(3);
+}
+
+.cursor.explore--active {
+  background: $color-dark-white;
+  transform: scale(3);
+}
+.cursor.drag {
+  background: gray;
+  transform: scale(3);
+}
+
+.about-title {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-desc {
+  .about__swipe {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    mix-blend-mode: darken;
+    transform: translateY(100%);
+  }
+}
+
+.t-swipe1 {
+  background: $color-span1;
+}
+
+.t-swipe2 {
+  background: $color-span2;
+}
+
+.t-swipe3 {
+  background: $color-span3;
+}

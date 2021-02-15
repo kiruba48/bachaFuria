@@ -1,0 +1,42 @@
+.cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+
+  img {
+    width: 75px;
+    height: 75px;
+  }
+
+  h4 {
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    color: $color-background;
+  }
+
+  h5 {
+    margin: 0.5rem 0;
+    letter-spacing: 0.1rem;
+    color: $color-background;
+  }
+
+  .remove-item {
+    color: red;
+    cursor: pointer;
+  }
+
+  .item-amount {
+    text-align: center;
+    color: $color-background;
+    font-weight: bold;
+  }
+
+  .fa-chevron-up,
+  .fa-chevron-down {
+    color: #f09d51;
+    cursor: pointer;
+  }
+}

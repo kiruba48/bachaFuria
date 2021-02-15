@@ -1,0 +1,154 @@
+.heading {
+  .classes-title {
+    height: 10vh;
+    font-size: 7rem;
+    color: $color-dark-white;
+    margin-left: 7rem;
+  }
+}
+
+.classes__container {
+  // position: relative;
+  @include respond(tab-port) {
+  }
+  @include respond(tab-land) {
+    display: flex;
+    flex-flow: row wrap;
+
+    .col-1 {
+      flex: 0 0 100%;
+    }
+    // .col-2 {
+    //   flex: 0 0 50%;
+    // }
+    // .col-3 {
+    //   flex: 0 0 50%;
+    // }
+  }
+  @include respond(desktop) {
+    .col-1 {
+      flex: 0 0 33.33%;
+    }
+    .col-2 {
+      flex: 0 0 33.33%;
+    }
+    .col-3 {
+      flex: 0 0 33.33%;
+    }
+  }
+  @include respond(big-desktop) {
+  }
+}
+
+.classes {
+  // position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  background: $color-background;
+
+  .styling__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .styling__card {
+    transform-style: preserve-3d;
+    min-height: 80vh;
+    width: 50rem;
+    border-radius: 1rem;
+    padding: 0 5rem;
+    background: #232324;
+    box-shadow: 0 0px 20px rgba(243, 240, 240, 0.2);
+    // 0 0 50px rgba(248, 246, 246, 0.2);
+    // box-shadow: 0 2rem 2rem rgba(189, 179, 179, 0.2),
+    //   0 0 5rem rgba(189, 179, 179, 0.2);
+
+    .styling__info {
+      h1 {
+        font-size: 3.5rem;
+        // color: $color-span1;
+        transition: all 0.75s ease-out;
+        font-family: "Abril Fatface", sans-serif;
+      }
+      .color1 {
+        color: $color-span1;
+      }
+      .color2 {
+        color: $color-span2;
+      }
+      .color3 {
+        color: $color-span3;
+      }
+      h3 {
+        font-size: 2rem;
+        font-style: inherit;
+        padding: 2.5rem 0;
+        color: $color-dark-white;
+        font-weight: lighter;
+        transition: all 0.75s ease-out;
+      }
+
+      .styling__action {
+        margin-top: 5rem;
+
+        button {
+          width: 100%;
+          padding: 1rem 0rem;
+          height: 5vh;
+          background: $color-dark-white;
+          border: none;
+          border: 2px solid white;
+          color: #232324;
+          // cursor: pointer;
+          border-radius: 1rem;
+          box-shadow: 7px 7px 5px 0px rgba(71, 70, 70, 0.75);
+          font-weight: bolder;
+          transition: all 0.75s ease-out;
+        }
+      }
+    }
+  }
+
+  .styling--header {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .hero__circle {
+      width: 25rem;
+      height: 25rem;
+      background: linear-gradient(
+        to right,
+        rgba(255, 139, 93, 0.75),
+        rgba(86, 124, 228, 0.75)
+      );
+      position: absolute;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    img {
+      width: 20rem;
+      z-index: 2;
+      transition: all 0.75s ease-out;
+    }
+  }
+
+  @include respond(tab-port) {
+  }
+  @include respond(tab-land) {
+    .styling__card {
+      width: 40rem;
+    }
+  }
+  @include respond(desktop) {
+  }
+  @include respond(big-desktop) {
+  }
+}

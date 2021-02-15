@@ -1,0 +1,51 @@
+// MEDIA QUERIES MANAGER
+
+/* 
+    0 - 600px      --- Phone
+    600px - 900px  --- Tablet portrait
+    900px - 1200px --- Tablet landscape
+    1200px - 1800px--- Desktop
+    1800px +       --- Big Desktop
+*/
+
+/*
+    $breakpoint argument choices:
+    - phone
+    - tab-port
+    - tab-land
+    - desktop
+    - big-desktop
+*/
+
+//ORDER: Base +Typography > general layout + grid > page Layout > components
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tab-port {
+    @media only screen and (min-width: 600px) {
+      @content;
+    } //600px 37.5em
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (min-width: 900px) {
+      @content;
+    } //900px 56.25em
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    } //1200px 75em
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 1800px) {
+      @content;
+    } //1800px 112.5em
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

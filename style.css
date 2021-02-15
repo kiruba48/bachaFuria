@@ -1805,8 +1805,7 @@ body {
   width: 10%;
   color: #e2e2e2;
   font-size: 4rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-family: "Abril Fatface";
   padding-top: 35rem;
 }
 
@@ -2465,164 +2464,6 @@ body {
   cursor: pointer;
 }
 
-.calendar {
-  width: 38rem;
-  height: 40rem;
-  background-color: #222227;
-  -webkit-box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.404);
-          box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.404);
-}
-
-@media only screen and (min-width: 600px) {
-  .calendar {
-    width: 80rem;
-    height: 55rem;
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .calendar {
-    width: 90rem;
-    height: 70rem;
-  }
-}
-
-.calendar .month {
-  width: 100%;
-  height: 12rem;
-  background-color: rgba(220, 87, 72, 0.89);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 2rem;
-  text-align: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-}
-
-.calendar .month i {
-  font-size: 2.5rem;
-  cursor: pointer;
-}
-
-.calendar .month h1 {
-  font-size: 3rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  margin-bottom: 1rem;
-}
-
-.calendar .month p {
-  font-size: 1.6rem;
-}
-
-.calendar .weekdays {
-  width: 100%;
-  height: 5rem;
-  padding: 0 0.4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.calendar .weekdays div {
-  font-size: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 0.1rem;
-  width: calc(37.2rem / 7);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-}
-
-@media only screen and (min-width: 600px) {
-  .calendar .weekdays div {
-    width: calc(79.2rem / 7);
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .calendar .weekdays div {
-    width: calc(89.2rem / 7);
-  }
-}
-
-.calendar .days {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 0.2rem;
-}
-
-.calendar .days div {
-  font-size: 0.9rem;
-  margin: 0.3rem;
-  width: calc(33.2rem / 7);
-  height: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s;
-}
-
-@media only screen and (min-width: 600px) {
-  .calendar .days div {
-    font-size: 1.2rem;
-    height: 6rem;
-    width: calc(75.2rem / 7);
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .calendar .days div {
-    font-size: 1.4rem;
-    height: 8rem;
-    width: calc(85.2rem / 7);
-  }
-}
-
-.calendar .days div:hover:not(.today) {
-  background-color: #262626;
-  border: 0.2rem solid #777;
-  cursor: pointer;
-}
-
-.calendar .prev-date,
-.calendar .next-date {
-  opacity: 0.5;
-}
-
-.today {
-  background-color: rgba(220, 87, 72, 0.89);
-}
-
 nav {
   background: #282829;
   padding: 1rem 1.5rem;
@@ -2711,10 +2552,10 @@ nav .nav-center .cart-btn--mobile .cart-items {
   position: absolute;
   top: -8px;
   right: -8px;
-  background: #e2e2e2;
+  background: #282829;
   padding: 0 5px;
   border-radius: 30%;
-  color: #282829;
+  color: #e2e2e2;
 }
 
 @media only screen and (min-width: 900px) {
@@ -2743,10 +2584,10 @@ nav .nav-center .cart-btn--desk {
     position: absolute;
     top: -8px;
     right: -8px;
-    background: #e2e2e2;
+    background: #282829;
     padding: 0 5px;
     border-radius: 30%;
-    color: #282829;
+    color: #e2e2e2;
   }
 }
 
@@ -3002,7 +2843,7 @@ nav .nav-center .links-container .links .nav__link:link, nav .nav-center .links-
   color: #17181a;
 }
 
-.show-cart {
+.showCart {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
@@ -3558,22 +3399,6 @@ nav .nav-center .links-container .links .nav__link:link, nav .nav-center .links-
   letter-spacing: 0.1rem;
   color: #f09d51;
   text-align: center;
-}
-
-.container {
-  width: 100%;
-  height: 100vh;
-  background-color: #17181a;
-  color: #e2e2e2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 /*! locomotive-scroll v3.5.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */

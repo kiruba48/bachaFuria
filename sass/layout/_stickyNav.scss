@@ -66,10 +66,10 @@ nav {
         position: absolute;
         top: -8px;
         right: -8px;
-        background: $color-dark-white;
+        background: $color-header;
         padding: 0 5px;
         border-radius: 30%;
-        color: $color-header;
+        color: $color-dark-white;
       }
 
       @include respond(tab-land) {
@@ -92,10 +92,10 @@ nav {
           position: absolute;
           top: -8px;
           right: -8px;
-          background: $color-dark-white;
+          background: $color-header;
           padding: 0 5px;
           border-radius: 30%;
-          color: $color-header;
+          color: $color-dark-white;
         }
       }
     }
